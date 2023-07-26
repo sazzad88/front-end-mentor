@@ -139,3 +139,28 @@ header {
 .subtitle+.btn-group {
     margin-top: 1.75rem;
 }
+
+.indicator {
+    margin: 10rem 0 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    width: 56px;
+    aspect-ratio: 1;
+    border: 1px solid rgba(135, 135, 157, 0.25);
+    color: var(--secondary-clr);
+    font-weight: 900;
+    line-height: 26px;
+    border-radius: 50%;
+}
+
+.stick {
+    width: 84px;
+    height: 1px;
+    background: rgba(135, 135, 157, 0.25);
+    transform: rotate(90deg) translateX(-40px);
+}
