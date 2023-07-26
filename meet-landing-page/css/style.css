@@ -41,6 +41,15 @@ header {
   color: var(--primary-clr);
 }
 
+.title-2 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+  line-height: 32px;
+  margin: 0 1rem;
+  color: var(--primary-clr);
+}
+
 .seondary-title {
   font-size: 1rem;
   font-weight: 900;
@@ -63,6 +72,10 @@ header {
 }
 
 .title + .subtitle {
+  margin-top: 1.75rem;
+}
+
+.title-2 + .subtitle {
   margin-top: 1.75rem;
 }
 
@@ -120,15 +133,15 @@ header {
   cursor: pointer;
   outline: none;
 }
+.btn span {
+  margin-left: 0.25rem;
+  color: rgb(143, 227, 249);
+}
 
 .btn-primary {
   border: 1px solid var(--hightlight-clr);
   background: var(--hightlight-clr);
   color: var(--white-clr);
-}
-.btn-primary span {
-  margin-left: 0.25rem;
-  color: rgb(143, 227, 249);
 }
 
 .btn-info {
@@ -157,6 +170,7 @@ header {
   font-weight: 900;
   line-height: 26px;
   border-radius: 50%;
+  background-color: var(--white-clr);
 }
 
 .stick {
@@ -181,6 +195,38 @@ header {
 
 .info-section {
   margin: 5rem 1rem;
+}
+
+.indicator.sticky {
+  margin-bottom: -28px;
+  position: relative;
+  z-index: 2;
+}
+
+footer {
+  background: url(../images/backgroud.png);
+  min-height: 12rem;
+  background-size: cover;
+  overflow: hidden;
+}
+footer .box {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: rgba(77, 150, 169, 0.6);
+  backdrop-filter: blur(2px);
+  color: var(--white-clr);
+}
+footer .box .title {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+  line-height: 32px;
+  margin: 0 1rem;
+  color: var(--white-clr);
+}
+footer .box .subtitle {
+  font-size: 18px;
+  color: var(--white-clr);
 }
 
 /*# sourceMappingURL=style.css.map */
