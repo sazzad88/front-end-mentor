@@ -41,6 +41,20 @@ header {
     color: var(--primary-clr);
 }
 
+.seondary-title {
+    font-size: 1rem;
+    font-weight: 900;
+    text-align: center;
+    line-height: 26px;
+    margin: 0 1rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--hightlight-clr);
+    margin-bottom: 1.5rem;
+}
+
+
+
 .subtitle {
     font-size: 1rem;
     font-weight: 500;
@@ -163,4 +177,23 @@ header {
     height: 1px;
     background: rgba(135, 135, 157, 0.25);
     transform: rotate(90deg) translateX(-40px);
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    img {
+        width: 150px;
+        height: 142px;
+        border-radius: 10px;
+    }
+}
+
+
+.info-section {
+    margin: 5rem 1rem;
 }
