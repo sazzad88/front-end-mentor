@@ -8,6 +8,8 @@
     --primary-clr: rgba(40, 40, 61, 1);
     --secondary-clr: rgba(135, 135, 157, 1);
     --hightlight-clr: rgba(77, 150, 169, 1);
+    --info-clr: rgba(133, 95, 177, 1);
+    --white-clr: rgba(255, 255, 255, 1);
 }
 
 body {
@@ -28,6 +30,28 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    line-height: 44px;
+    margin: 0 1rem;
+    color: var(--primary-clr);
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 26px;
+    margin: 0 1rem;
+    text-align: center;
+    color: var(--secondary-clr);
+}
+
+.title+.subtitle {
+    margin-top: 1.75rem;
 }
 
 .hero {
@@ -66,4 +90,52 @@ header {
             align-self: flex-end;
         }
     }
+
+    .hero-info {
+        grid-column: span 2;
+        justify-self: center;
+        margin-top: 4rem;
+    }
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 1rem 2.5rem;
+    border-radius: 32px;
+    font-weight: 900;
+    line-height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-primary {
+    border: 1px solid var(--hightlight-clr);
+    background: var(--hightlight-clr);
+    color: var(--white-clr);
+
+    span {
+        margin-left: .25rem;
+        color: rgba(143, 227, 249, 1);
+    }
+}
+
+.btn-info {
+    border: 1px solid var(--info-clr);
+    background: var(--info-clr);
+    color: var(--white-clr);
+}
+
+.subtitle+.btn-group {
+    margin-top: 1.75rem;
 }
