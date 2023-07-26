@@ -1,5 +1,55 @@
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+header {
+  padding: 3rem;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+.hero .masks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 10rem;
+}
+.hero .masks .mask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.hero .masks .mask img {
+  width: 56px;
+  aspect-ratio: 1;
+}
+.hero .masks:nth-child(1) .mask:nth-child(odd) {
+  align-self: flex-end;
+}
+.hero .masks:nth-child(2) .mask:nth-child(even) {
+  align-self: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */
