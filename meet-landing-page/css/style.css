@@ -4,9 +4,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-clr: rgba(40, 40, 61, 1);
+  --secondary-clr: rgba(135, 135, 157, 1);
+  --hightlight-clr: rgba(77, 150, 169, 1);
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 p {
