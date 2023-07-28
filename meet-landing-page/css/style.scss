@@ -12,6 +12,8 @@
     --white-clr: rgba(255, 255, 255, 1);
 }
 
+$breakpoint-tablet: 767px;
+
 body {
     margin: 0;
     padding: 0;
@@ -103,6 +105,8 @@ header {
                 width: 56px;
                 aspect-ratio: 1;
             }
+
+
         }
     }
 
@@ -225,10 +229,10 @@ footer {
     background: url(../images/backgroud.png);
     min-height: 12rem;
     background-size: cover;
-    background-position: center center;
+    background-position: top center;
     position: relative;
     isolation: isolate; // creating new stacking context
-    padding: 1.5rem;
+    padding: 5rem 1.5rem 2rem 1.5rem;
     color: var(--white-clr);
 
 
@@ -259,4 +263,24 @@ footer::before {
     inset: 0;
     /* we can use either inset or use top,left ,width,height to cover full contaiiner */
     z-index: -1;
+}
+
+
+@media (min-width: $breakpoint-tablet) {
+    .hero {
+        .masks {
+            min-height: 20rem;
+
+            .mask {
+                img {
+                    width: 110px;
+                    aspect-ratio: 1;
+                }
+            }
+        }
+    }
+
+    .btn-group {
+        flex-direction: row;
+    }
 }
