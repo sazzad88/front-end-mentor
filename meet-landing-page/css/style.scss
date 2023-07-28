@@ -262,7 +262,7 @@ footer::before {
     // top: 0;
     // left: 0;
     inset: 0;
-    /* we can use either inset or use top,left ,width,height to cover full contaiiner */
+    /* we can use either inset or use top,left ,width,height to cover full contaiiner  */
     z-index: -1;
 }
 
@@ -283,6 +283,21 @@ footer::before {
 
     .btn-group {
         flex-direction: row;
+    }
+
+    .info-section {
+        .title-2 {
+            font-size: 2.5rem;
+            line-height: 44px;
+            max-width: 28rem;
+            margin: 0 auto;
+        }
+
+        .subtitle {
+            max-width: 36rem;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
     }
 }
 
@@ -322,6 +337,12 @@ footer::before {
         img {
             width: 250px;
             height: 260px;
+        }
+    }
+
+    .info-section {
+        .subtitle {
+            max-width: 29rem;
         }
     }
 
