@@ -247,5 +247,48 @@ footer::before {
     flex-direction: row;
   }
 }
+@media (min-width: 1200px) {
+  .hero {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  .hero .masks:nth-child(1) {
+    margin-bottom: 5rem;
+  }
+  .hero .hero-info {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    align-self: end;
+    margin: 0 6rem 3rem 6rem;
+    min-width: 29rem;
+  }
+  .hero .hero-info .title {
+    text-align: center;
+  }
+  .hero .hero-info .subtitle {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .gallery img {
+    width: 250px;
+    height: 260px;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    min-height: 20rem;
+  }
+  footer .title + .subtitle,
+  footer .subtitle + .btn-group {
+    margin-top: 0;
+  }
+  footer .subtitle {
+    max-width: 21.5rem;
+    text-align: left;
+    margin: 0 5rem;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
