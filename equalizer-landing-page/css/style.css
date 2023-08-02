@@ -8,6 +8,8 @@
   --primary-clr: #191826;
   --orange-clr: #FA7453;
   --white-clr: rgba(255, 255, 255, 1);
+  --tablet-side-margin: 2.4rem;
+  --tablet-distance-percentage: 8.2%;
 }
 
 body {
@@ -65,7 +67,7 @@ header {
   background-position: top 90% right 100%;
 }
 header .logo {
-  padding: 2.5rem 1.5rem;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
 }
 header .title {
   max-width: 90%;
@@ -99,13 +101,19 @@ main .phone {
   transform: translateX(-50%);
 }
 
+.plan-container {
+  display: flex;
+  margin-top: -134px;
+  background-color: transparent;
+}
+
 .plan {
+  flex-basis: 100%;
   position: relative;
   background-color: var(--orange-clr);
   border-radius: 8px;
   color: var(--white-clr);
-  padding: 1.5rem 1rem;
-  margin-top: -134px;
+  padding: 1.5rem 2rem;
 }
 .plan .title {
   margin-top: 1.5rem;
@@ -139,7 +147,7 @@ main .phone {
 }
 
 footer {
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1.5rem;
 }
 footer .info {
   padding: 1.5rem 0;
@@ -160,6 +168,49 @@ footer .info .social-icons {
 footer .info .social-icons img {
   width: 20px;
   aspect-ratio: 1/1;
+}
+
+@media (min-width: 767px) {
+  main {
+    margin-left: var(--tablet-side-margin);
+    margin-right: var(--tablet-side-margin);
+    min-height: 40rem;
+    background-size: 45% auto;
+    background-position: top -24% center;
+  }
+  main .phone {
+    position: absolute;
+    left: min(var(--tablet-distance-percentage), 200px);
+    top: -22%;
+    transform: translateX(0%);
+  }
+  main .phone img {
+    max-width: 272px;
+  }
+  .plan-container {
+    margin-left: var(--tablet-side-margin);
+    margin-right: var(--tablet-side-margin);
+    margin-top: -465px;
+    justify-content: end;
+    padding-right: min(var(--tablet-distance-percentage), 200px);
+  }
+  .plan {
+    max-width: 400px;
+    padding: 1.5rem 2rem;
+  }
+  footer {
+    margin-left: var(--tablet-side-margin);
+    margin-right: var(--tablet-side-margin);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 4rem;
+  }
+  footer .info {
+    flex-direction: row;
+  }
+  footer .info .address {
+    max-width: 362px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
