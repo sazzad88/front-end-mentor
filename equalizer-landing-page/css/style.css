@@ -34,6 +34,7 @@ img {
   line-height: 32px;
   flex-wrap: wrap;
   border-radius: 12px;
+  cursor: pointer;
 }
 .btn.btn-dark {
   background-color: var(--primary-clr);
@@ -42,6 +43,19 @@ img {
 .btn.btn-white {
   background-color: var(--white-clr);
   color: var(--primary-clr);
+}
+.btn .icon {
+  width: 1rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.btn + .btn {
+  margin-top: 1rem;
+}
+
+.logo {
+  width: 146px;
 }
 
 header {
@@ -84,40 +98,65 @@ main .phone {
   top: -20%;
   transform: translateX(-50%);
 }
-main .plan {
-  position: absolute;
-  left: 0;
-  bottom: -80%;
-  width: 100%;
+
+.plan {
   background-color: var(--orange-clr);
   border-radius: 8px;
   color: var(--white-clr);
   padding: 1.5rem 1rem;
 }
-main .plan .title {
+.plan .title {
   font-weight: 700;
   font-size: 2rem;
   line-height: 40px;
 }
-main .plan .description {
+.plan .description {
   font-size: 18px;
   line-height: 28px;
   max-width: 90%;
 }
-main .plan .title + .description {
+.plan .title + .description {
   margin: 1.5rem 0;
 }
-main .plan .price {
+.plan .price {
   display: flex;
   align-items: center;
   font-size: 20px;
   line-height: 32px;
   gap: 1rem;
+  margin: 2rem 0;
 }
-main .plan .price .amount {
+.plan .price .amount {
   font-size: 64px;
   font-weight: 700;
   line-height: 52px;
+}
+.plan .actions {
+  margin: 1rem 0;
+}
+
+footer {
+  padding: 1.5rem 1rem;
+}
+footer .info {
+  padding-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: space-between;
+}
+footer .info .address {
+  max-width: 82%;
+}
+footer .info .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+footer .info .social-icons img {
+  width: 20px;
+  aspect-ratio: 1/1;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -34,6 +34,7 @@ img {
     line-height: 32px;
     flex-wrap: wrap;
     border-radius: 12px;
+    cursor: pointer;
 
     &.btn-dark {
         background-color: var(--primary-clr);
@@ -44,6 +45,20 @@ img {
         background-color: var(--white-clr);
         color: var(--primary-clr);
     }
+
+    .icon {
+        width: 1rem;
+        height: 1.25rem;
+        margin-right: .5rem;
+    }
+}
+
+.btn+.btn {
+    margin-top: 1rem;
+}
+
+.logo {
+    width: 146px;
 }
 
 header {
@@ -90,48 +105,82 @@ main {
         transform: translateX(-50%);
     }
 
-    .plan {
-        position: absolute;
-        left: 0;
-        bottom: -80%;
-        width: 100%;
-        background-color: var(--orange-clr);
-        border-radius: 8px;
-        color: var(--white-clr);
-        padding: 1.5rem 1rem;
-
-        .title {
-            font-weight: 700;
-            font-size: 2rem;
-            line-height: 40px;
-        }
-
-        .description {
-            font-size: 18px;
-            line-height: 28px;
-            max-width: 90%;
-        }
-
-        .title+.description {
-            margin: 1.5rem 0;
-        }
-
-        .price {
-            display: flex;
-            align-items: center;
-            font-size: 20px;
-            line-height: 32px;
-            gap: 1rem;
-
-            .amount {
-                font-size: 64px;
-                font-weight: 700;
-                line-height: 52px;
-            }
-        }
 
 
-        .buttons {}
+}
+
+.plan {
+    // position: absolute;
+    // left: 0;
+    // bottom: -80%;
+    // width: 100%;
+    background-color: var(--orange-clr);
+    border-radius: 8px;
+    color: var(--white-clr);
+    padding: 1.5rem 1rem;
+
+    .title {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 40px;
     }
 
+    .description {
+        font-size: 18px;
+        line-height: 28px;
+        max-width: 90%;
+    }
+
+    .title+.description {
+        margin: 1.5rem 0;
+    }
+
+    .price {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        line-height: 32px;
+        gap: 1rem;
+        margin: 2rem 0;
+
+        .amount {
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 52px;
+        }
+    }
+
+
+    .actions {
+        margin: 1rem 0;
+    }
+}
+
+
+footer {
+    padding: 1.5rem 1rem;
+
+    .info {
+        padding-top: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 3rem;
+        justify-content: space-between;
+
+        .address {
+            max-width: 82%;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+
+            img {
+                width: 20px;
+                aspect-ratio: 1/1;
+            }
+        }
+    }
 }
