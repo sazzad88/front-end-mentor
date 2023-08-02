@@ -5,7 +5,7 @@
 }
 
 :root {
-    --primary-clr: rgba(#191826, 1);
+    --primary-clr: #191826;
     --white-clr: rgba(255, 255, 255, 1);
 }
 
@@ -18,9 +18,12 @@ body {
     font-weight: 400;
 }
 
+img {
+    width: 100%;
+}
+
 header {
     background-image: url(../images/bg-main-mobile.png);
-    border: 1px solid red;
     min-height: 30rem;
     background-repeat: no-repeat;
     background-position: top 90% right 100%;
@@ -41,5 +44,25 @@ header {
     .subtitle {
         padding: 1rem 1.5rem;
         line-height: 26px;
+    }
+}
+
+main {
+    background-image: url(../images/bg-pattern-2.svg);
+    background-color: var(--primary-clr);
+    border: 1px solid var(--primary-clr);
+    background-repeat: no-repeat;
+    background-position: top -1% center;
+    background-size: 68% auto;
+    border-radius: 8px;
+    min-height: 28rem;
+    position: relative;
+    margin-top: 12rem;
+
+    .phone {
+        position: absolute;
+        left: 50%;
+        top: -20%;
+        transform: translateX(-50%);
     }
 }
