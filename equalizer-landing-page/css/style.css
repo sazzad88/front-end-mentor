@@ -6,6 +6,7 @@
 
 :root {
   --primary-clr: #191826;
+  --orange-clr: #FA7453;
   --white-clr: rgba(255, 255, 255, 1);
 }
 
@@ -20,6 +21,27 @@ body {
 
 img {
   width: 100%;
+}
+
+.btn {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  flex-wrap: wrap;
+  border-radius: 12px;
+}
+.btn.btn-dark {
+  background-color: var(--primary-clr);
+  color: var(--white-clr);
+}
+.btn.btn-white {
+  background-color: var(--white-clr);
+  color: var(--primary-clr);
 }
 
 header {
@@ -39,7 +61,7 @@ header .title {
   line-height: 48px;
   letter-spacing: -0.455px;
 }
-header .subtitle {
+header .description {
   padding: 1rem 1.5rem;
   line-height: 26px;
 }
@@ -52,7 +74,7 @@ main {
   background-position: top -1% center;
   background-size: 68% auto;
   border-radius: 8px;
-  min-height: 28rem;
+  min-height: 30rem;
   position: relative;
   margin-top: 12rem;
 }
@@ -61,6 +83,41 @@ main .phone {
   left: 50%;
   top: -20%;
   transform: translateX(-50%);
+}
+main .plan {
+  position: absolute;
+  left: 0;
+  bottom: -80%;
+  width: 100%;
+  background-color: var(--orange-clr);
+  border-radius: 8px;
+  color: var(--white-clr);
+  padding: 1.5rem 1rem;
+}
+main .plan .title {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 40px;
+}
+main .plan .description {
+  font-size: 18px;
+  line-height: 28px;
+  max-width: 90%;
+}
+main .plan .title + .description {
+  margin: 1.5rem 0;
+}
+main .plan .price {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  line-height: 32px;
+  gap: 1rem;
+}
+main .plan .price .amount {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 52px;
 }
 
 /*# sourceMappingURL=style.css.map */
