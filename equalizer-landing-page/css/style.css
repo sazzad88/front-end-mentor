@@ -100,12 +100,15 @@ main .phone {
 }
 
 .plan {
+  position: relative;
   background-color: var(--orange-clr);
   border-radius: 8px;
   color: var(--white-clr);
   padding: 1.5rem 1rem;
+  margin-top: -134px;
 }
 .plan .title {
+  margin-top: 1.5rem;
   font-weight: 700;
   font-size: 2rem;
   line-height: 40px;
@@ -139,7 +142,7 @@ footer {
   padding: 1.5rem 1rem;
 }
 footer .info {
-  padding-top: 1.5rem;
+  padding: 1.5rem 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
