@@ -8,12 +8,14 @@
     --primary-clr: #191826;
     --orange-clr: #FA7453;
     --white-clr: rgba(255, 255, 255, 1);
-    --tablet-side-margin: 2.4rem;
-    --tablet-distance-percentage: 8.2%;
+    --mobile-side-margin: 2.25rem;
+    --tablet-side-margin: 3.25rem;
+    --tablet-distance-percentage: 8.5%;
+    --desktop-distance-percentage: 9%;
 }
 
 $breakpoint-tablet: 767px;
-$breakpoint-desktop: 1200px;
+$breakpoint-desktop: 1250px;
 
 body {
     font-family: 'IBM Plex Sans', sans-serif;
@@ -66,6 +68,19 @@ img {
     width: 146px;
 }
 
+header,
+main,
+.plan-container,
+footer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 var(--mobile-side-margin);
+}
+
+.plan-container {
+    padding: 0;
+}
+
 header {
     background-image: url(../images/bg-main-mobile.png);
     min-height: 30rem;
@@ -73,12 +88,12 @@ header {
     background-position: top 90% right 100%;
 
     .logo {
-        padding: 2.5rem 1.5rem 2rem 1.5rem;
+        padding: 2.5rem 0;
     }
 
     .title {
         max-width: 90%;
-        padding: 1rem 1.5rem;
+        padding: 1rem 0;
         font-weight: 700;
         font-size: 2.5rem;
         line-height: 48px;
@@ -86,7 +101,7 @@ header {
     }
 
     .description {
-        padding: 1rem 1.5rem;
+        padding: 1rem 0;
         line-height: 26px;
     }
 }
@@ -126,7 +141,7 @@ main {
     background-color: var(--orange-clr);
     border-radius: 8px;
     color: var(--white-clr);
-    padding: 1.5rem 2rem;
+    padding: 1.5rem var(--mobile-side-margin);
 
 
     .title {
@@ -180,7 +195,9 @@ main {
 
 
 footer {
-    padding: 1.5rem 1.5rem;
+    .logo {
+        padding-top: 2.5rem;
+    }
 
     .info {
         padding: 1.5rem 0;
@@ -208,20 +225,23 @@ footer {
 }
 
 @media (min-width: $breakpoint-tablet) {
+
+    header,
+    main,
+    .plan-container,
+    footer {
+        padding-left: var(--tablet-side-margin);
+        padding-right: var(--tablet-side-margin);
+    }
+
     header {
         min-height: 38rem;
         background-image: url(../images/bg-main-tablet.png);
         background-position: bottom 22% right;
 
-        .logo {
-            padding-left: var(--tablet-side-margin);
-        }
-
         .title,
         .description {
-            padding-left: var(--tablet-side-margin);
             padding-right: 0;
-
         }
 
         .title {
@@ -240,11 +260,9 @@ footer {
     }
 
     main {
-        margin-left: var(--tablet-side-margin);
-        margin-right: var(--tablet-side-margin);
         min-height: 40rem;
-        background-size: 45% auto;
-        background-position: top -24% center;
+        background-size: 40% auto;
+        background-position: top -32% center;
 
         .phone {
             position: absolute;
@@ -253,22 +271,20 @@ footer {
             transform: translateX(0%);
 
             img {
-                max-width: 272px;
+                max-width: 300px;
             }
         }
     }
 
     .plan-container {
-        margin-left: var(--tablet-side-margin);
-        margin-right: var(--tablet-side-margin);
         margin-top: -465px;
         justify-content: end;
         padding-right: min(var(--tablet-distance-percentage), 200px);
     }
 
     .plan {
-        max-width: 400px;
-        padding: 1.5rem 2rem;
+        max-width: 450px;
+        padding: 1.5rem 3rem;
     }
 
     .banner {
@@ -278,10 +294,6 @@ footer {
     }
 
     footer {
-        margin-left: var(--tablet-side-margin);
-        margin-right: var(--tablet-side-margin);
-        padding-left: 0;
-        padding-right: 0;
         padding-top: 4rem;
 
         .info {
@@ -292,4 +304,59 @@ footer {
             }
         }
     }
+}
+
+@media (min-width: $breakpoint-desktop) {
+
+    header,
+    main,
+    footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    header {
+        min-height: 45rem;
+
+        .title {
+            font-size: 5.5rem;
+            line-height: 88px;
+            font-weight: 700;
+            max-width: 855px;
+        }
+
+        .description {
+            max-width: 855px;
+            font-size: 20px;
+            line-height: 34px;
+        }
+    }
+
+    main {
+        min-height: 45rem;
+        background-size: auto 68%;
+        background-position: top 24% center;
+
+        .phone {
+            position: absolute;
+            left: min(var(--desktop-distance-percentage), 200px);
+            top: -40%;
+            transform: translateX(0%);
+
+            img {
+                max-width: 410px;
+            }
+        }
+    }
+
+    .plan-container {
+        margin-top: -435px;
+        padding-right: min(var(--tablet-distance-percentage), 200px);
+    }
+
+    .banner {
+        top: -30px;
+        right: -24px;
+    }
+
 }
