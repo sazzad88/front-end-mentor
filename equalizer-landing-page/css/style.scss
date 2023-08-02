@@ -62,7 +62,7 @@ img {
     margin-top: 1rem;
 }
 
-.logo {
+.logo img {
     width: 146px;
 }
 
@@ -167,6 +167,17 @@ main {
     }
 }
 
+.banner {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+
+    img {
+        width: 260px;
+    }
+}
+
 
 footer {
     padding: 1.5rem 1.5rem;
@@ -197,6 +208,37 @@ footer {
 }
 
 @media (min-width: $breakpoint-tablet) {
+    header {
+        min-height: 38rem;
+        background-image: url(../images/bg-main-tablet.png);
+        background-position: bottom 22% right;
+
+        .logo {
+            padding-left: var(--tablet-side-margin);
+        }
+
+        .title,
+        .description {
+            padding-left: var(--tablet-side-margin);
+            padding-right: 0;
+
+        }
+
+        .title {
+            font-size: 4rem;
+            line-height: 64px;
+            font-weight: 700;
+            max-width: 500px;
+        }
+
+        .description {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 28px;
+            max-width: 575px;
+        }
+    }
+
     main {
         margin-left: var(--tablet-side-margin);
         margin-right: var(--tablet-side-margin);
@@ -227,6 +269,12 @@ footer {
     .plan {
         max-width: 400px;
         padding: 1.5rem 2rem;
+    }
+
+    .banner {
+        display: inline-block;
+        top: -48px;
+        right: -48px;
     }
 
     footer {
