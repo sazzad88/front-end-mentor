@@ -18,11 +18,13 @@ $tab-side-padding : 2.5rem;
 $clr--primary : #13183F;
 $clr-secondary : #83869A;
 $clr--white : #ffffff;
+$clr--bright : #F02AA6;
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(180deg, #FFF 0%, #F0F1FF 100%);
 }
 
 header {
@@ -47,7 +49,7 @@ header {
     cursor: pointer;
 
     &-highlight {
-        background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+        background: linear-gradient(180deg, #FF6F48 0%, $clr--bright 100%);
         padding: 0.75rem 2.25rem;
         align-self: baseline;
         border-color: transparent;
@@ -76,5 +78,53 @@ header {
     h2+p {
         margin-top: 1rem;
         margin-bottom: 1.5rem;
+    }
+
+    .mobile-hero {
+        margin-top: 3rem;
+    }
+
+    @media (min-width: $tablet-min-screen) {
+        .mobile-hero {
+            display: none;
+        }
+    }
+}
+
+main {
+    padding: 1rem $mobile-side-padding;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem 0.5rem;
+
+    .work-item {
+        padding: 32px 28px;
+        border-radius: 6px;
+        background: $clr--white;
+
+        h3 {
+            color: $clr--primary;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        p {
+            color: $clr-secondary;
+            font-weight: 500;
+            line-height: 26px;
+        }
+
+        h3+p {
+            margin: 1.5rem 0;
+        }
+
+        .start {
+            color: $clr--bright;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 28px;
+            text-decoration: none;
+        }
     }
 }

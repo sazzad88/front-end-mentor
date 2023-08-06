@@ -9,6 +9,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Plus Jakarta Sans", sans-serif;
+  background: linear-gradient(180deg, #FFF 0%, #F0F1FF 100%);
 }
 
 header {
@@ -58,6 +59,47 @@ header {
 .hero h2 + p {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+}
+.hero .mobile-hero {
+  margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  .hero .mobile-hero {
+    display: none;
+  }
+}
+
+main {
+  padding: 1rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem 0.5rem;
+}
+main .work-item {
+  padding: 32px 28px;
+  border-radius: 6px;
+  background: #ffffff;
+}
+main .work-item h3 {
+  color: #13183F;
+  font-size: 20px;
+  font-weight: 800;
+}
+main .work-item p {
+  color: #83869A;
+  font-weight: 500;
+  line-height: 26px;
+}
+main .work-item h3 + p {
+  margin: 1.5rem 0;
+}
+main .work-item .start {
+  color: #F02AA6;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
