@@ -84,6 +84,15 @@ main {
   align-items: center;
   gap: 2.5rem 0.5rem;
 }
+main .work-item-banner {
+  padding: 1.5rem 1.75rem;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 32px;
+  color: #ffffff;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+}
 main .work-item {
   padding: 32px 28px;
   border-radius: 6px;
