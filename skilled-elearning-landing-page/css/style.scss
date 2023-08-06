@@ -53,7 +53,15 @@ header {
         padding: 0.75rem 2.25rem;
         align-self: baseline;
         border-color: transparent;
+    }
 
+    &-bright {
+        background: linear-gradient(180deg, #4851FF 0%, #F02AA6 100%);
+        padding: 0.75rem 2.25rem;
+        align-self: baseline;
+        border-color: transparent;
+        border-top-color: #4851FF;
+        border-bottom-color: #F02AA6;
     }
 }
 
@@ -127,4 +135,12 @@ main {
             text-decoration: none;
         }
     }
+}
+
+footer {
+    padding: 2rem $mobile-side-padding;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $clr--primary;
 }
