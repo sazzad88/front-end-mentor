@@ -2,6 +2,7 @@
 ::after,
 ::before {
     box-sizing: border-box;
+    margin: 0;
 }
 
 $mobile-screen: 275px;
@@ -15,10 +16,65 @@ $mobile-side-padding : 1rem;
 $tab-side-padding : 2.5rem;
 
 $clr--primary : #13183F;
+$clr-secondary : #83869A;
 $clr--white : #ffffff;
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+header {
+    padding: 1rem $mobile-side-padding;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 28px;
+    background: $clr--primary;
+    border-color: $clr--primary;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $clr--white;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+
+    &-highlight {
+        background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+        padding: 0.75rem 2.25rem;
+        align-self: baseline;
+        border-color: transparent;
+
+    }
+}
+
+.hero {
+    padding: 1rem $mobile-side-padding;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        color: $clr--primary;
+        font-size: 40px;
+        font-weight: 800;
+        margin: 1rem 0;
+    }
+
+    p {
+        color: $clr-secondary;
+        font-weight: 500;
+        line-height: 26px;
+    }
+
+    h2+p {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
 }

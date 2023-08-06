@@ -2,12 +2,62 @@
 ::after,
 ::before {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+header {
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 28px;
+  background: #13183F;
+  border-color: #13183F;
+  border-radius: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+.btn-highlight {
+  background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+  padding: 0.75rem 2.25rem;
+  align-self: baseline;
+  border-color: transparent;
+}
+
+.hero {
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.hero h2 {
+  color: #13183F;
+  font-size: 40px;
+  font-weight: 800;
+  margin: 1rem 0;
+}
+.hero p {
+  color: #83869A;
+  font-weight: 500;
+  line-height: 26px;
+}
+.hero h2 + p {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
