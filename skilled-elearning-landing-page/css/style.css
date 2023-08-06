@@ -17,6 +17,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  header {
+    padding: 1rem 2.5rem;
+  }
 }
 
 .btn {
@@ -49,6 +56,8 @@ header {
 }
 
 .hero {
+  max-width: 1250px;
+  margin: 0 auto;
   padding: 1rem 1rem;
   display: flex;
   flex-direction: column;
@@ -72,12 +81,17 @@ header {
   margin-top: 3rem;
 }
 @media (min-width: 768px) {
+  .hero {
+    padding: 1rem 2.5rem;
+  }
   .hero .mobile-hero {
     display: none;
   }
 }
 
 main {
+  max-width: 1250px;
+  margin: 0 auto;
   padding: 1rem 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -98,6 +112,7 @@ main .work-item {
   border-radius: 6px;
   background: #ffffff;
   position: relative;
+  flex-basis: 100%;
 }
 main .work-item .icon {
   width: 56px;
@@ -127,13 +142,35 @@ main .work-item .start {
   line-height: 28px;
   text-decoration: none;
 }
+@media (min-width: 768px) {
+  main {
+    padding: 1rem 2.5rem;
+    gap: 2.5rem 1rem;
+  }
+  main .work-item {
+    flex-basis: 48%;
+  }
+  main .work-item-banner {
+    align-self: stretch;
+    flex-basis: 48%;
+    padding-top: 3.5rem;
+    padding-left: 2rem;
+  }
+}
 
 footer {
+  max-width: 1250px;
+  margin: 0 auto;
   padding: 2rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #13183F;
+}
+@media (min-width: 768px) {
+  footer {
+    padding: 2rem 2.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -32,6 +32,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    max-width: $max-window-width;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-min-screen) {
+        padding: 1rem $tab-side-padding;
+    }
 }
 
 .btn {
@@ -66,6 +73,8 @@ header {
 }
 
 .hero {
+    max-width: $max-window-width;
+    margin: 0 auto;
     padding: 1rem $mobile-side-padding;
     display: flex;
     flex-direction: column;
@@ -93,6 +102,8 @@ header {
     }
 
     @media (min-width: $tablet-min-screen) {
+        padding: 1rem $tab-side-padding;
+
         .mobile-hero {
             display: none;
         }
@@ -100,6 +111,8 @@ header {
 }
 
 main {
+    max-width: $max-window-width;
+    margin: 0 auto;
     padding: 1rem $mobile-side-padding;
     display: flex;
     flex-wrap: wrap;
@@ -121,6 +134,7 @@ main {
         border-radius: 6px;
         background: $clr--white;
         position: relative;
+        flex-basis: 100%;
 
         .icon {
             width: 56px;
@@ -155,12 +169,34 @@ main {
             text-decoration: none;
         }
     }
+
+    @media (min-width: $tablet-min-screen) {
+        padding: 1rem $tab-side-padding;
+        gap: 2.5rem 1rem;
+
+        .work-item {
+            flex-basis: 48%;
+        }
+
+        .work-item-banner {
+            align-self: stretch;
+            flex-basis: 48%;
+            padding-top: 3.5rem;
+            padding-left: 2rem;
+        }
+    }
 }
 
 footer {
+    max-width: $max-window-width;
+    margin: 0 auto;
     padding: 2rem $mobile-side-padding;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: $clr--primary;
+
+    @media (min-width: $tablet-min-screen) {
+        padding: 2rem $tab-side-padding;
+    }
 }
