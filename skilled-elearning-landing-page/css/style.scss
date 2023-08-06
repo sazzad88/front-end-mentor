@@ -1,0 +1,24 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+$mobile-screen: 275px;
+$tablet-min-screen: 768px;
+$tablet-max-screen: 990px;
+
+$desktop-screen : 1250px;
+
+$max-window-width : 1250px;
+$mobile-side-padding : 1rem;
+$tab-side-padding : 2.5rem;
+
+$clr--primary : #13183F;
+$clr--white : #ffffff;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
