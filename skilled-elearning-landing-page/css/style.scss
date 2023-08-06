@@ -7,11 +7,11 @@
 
 $mobile-screen: 275px;
 $tablet-min-screen: 768px;
-$tablet-max-screen: 990px;
+$tablet-max-screen: 991px;
 
-$desktop-screen : 1250px;
+$desktop-screen : 1100px;
 
-$max-window-width : 1250px;
+$max-window-width : 1100px;
 $mobile-side-padding : 1rem;
 $tab-side-padding : 2.5rem;
 
@@ -25,6 +25,7 @@ body {
     padding: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
     background: linear-gradient(180deg, #FFF 0%, #F0F1FF 100%);
+    overflow-x: hidden;
 }
 
 header {
@@ -38,6 +39,10 @@ header {
 
     @media (min-width: $tablet-min-screen) {
         padding: 1rem $tab-side-padding;
+    }
+
+    @media (min-width: $max-window-width) {
+        padding: 1rem 0;
     }
 }
 
@@ -55,11 +60,19 @@ header {
     padding: 0.5rem 1.5rem;
     cursor: pointer;
 
+    &:hover {
+        background: #666CA3;
+    }
+
     &-highlight {
         background: linear-gradient(180deg, #FF6F48 0%, $clr--bright 100%);
         padding: 0.75rem 2.25rem;
         align-self: baseline;
         border-color: transparent;
+
+        &:hover {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+        }
     }
 
     &-bright {
@@ -69,6 +82,12 @@ header {
         border-color: transparent;
         border-top-color: #4851FF;
         border-bottom-color: #F02AA6;
+
+        &:hover {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(180deg, #4851FF 0%, #F02AA6 100%);
+            border-top-color: rgba(255, 255, 255, 0.50);
+            border-bottom-color: rgba(255, 255, 255, 0.50);
+        }
     }
 }
 
@@ -78,6 +97,8 @@ header {
     padding: 1rem $mobile-side-padding;
     display: flex;
     flex-direction: column;
+
+
 
     h2 {
         color: $clr--primary;
@@ -104,8 +125,24 @@ header {
     @media (min-width: $tablet-min-screen) {
         padding: 1rem $tab-side-padding;
 
+        &>* {
+            max-width: 398px;
+        }
+
         .mobile-hero {
             display: none;
+        }
+    }
+
+    @media (min-width: $max-window-width) {
+        padding: 1rem 0;
+
+        &>* {
+            max-width: 460px;
+        }
+
+        h2 {
+            font-size: 56px;
         }
     }
 }
@@ -173,6 +210,7 @@ main {
     @media (min-width: $tablet-min-screen) {
         padding: 1rem $tab-side-padding;
         gap: 2.5rem 1rem;
+        margin-top: 5rem;
 
         .work-item {
             flex-basis: 48%;
@@ -185,18 +223,84 @@ main {
             padding-left: 2rem;
         }
     }
+
+    @media (min-width: $tablet-max-screen) {
+
+        .work-item,
+        .work-item-banner {
+            flex-basis: 49%;
+        }
+    }
+
+    @media (min-width: $max-window-width) {
+        padding: 1rem 0;
+        gap: 2.5rem 1.25rem;
+        margin-top: 10rem;
+
+        .work-item {
+            flex-basis: 32%;
+            align-self: stretch;
+        }
+
+        .work-item-banner {
+            flex-basis: 32%;
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
 }
 
-footer {
-    max-width: $max-window-width;
-    margin: 0 auto;
-    padding: 2rem $mobile-side-padding;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: $clr--primary;
+.tablet-hero,
+.desktop-hero {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
 
-    @media (min-width: $tablet-min-screen) {
-        padding: 2rem $tab-side-padding;
+
+
+footer {
+    background: $clr--primary;
+    margin-top: 4rem;
+
+    .wrapper {
+        max-width: $max-window-width;
+        margin: 0 auto;
+        padding: 2rem $mobile-side-padding;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        @media (min-width: $tablet-min-screen) {
+            padding: 2rem $tab-side-padding;
+        }
+
+        @media (min-width: $max-window-width) {
+            padding: 2rem 0;
+        }
+    }
+
+}
+
+@media (min-width: $tablet-min-screen) {
+    .tablet-hero {
+        display: inline;
+        right: -200px;
+        max-width: 500px;
+    }
+}
+
+@media (min-width: $max-window-width) {
+    .tablet-hero {
+        display: none;
+    }
+
+    .desktop-hero {
+        display: inline;
+        top: -120px;
+        right: -240px;
+        max-width: 800px;
     }
 }
