@@ -82,17 +82,26 @@ main {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1.5rem 0.5rem;
+  gap: 2.5rem 0.5rem;
 }
 main .work-item {
   padding: 32px 28px;
   border-radius: 6px;
   background: #ffffff;
+  position: relative;
+}
+main .work-item .icon {
+  width: 56px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: -28px;
+  left: 32px;
 }
 main .work-item h3 {
   color: #13183F;
   font-size: 20px;
   font-weight: 800;
+  margin-top: 1.25rem;
 }
 main .work-item p {
   color: #83869A;

@@ -104,17 +104,27 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 1.5rem 0.5rem;
+    gap: 2.5rem 0.5rem;
 
     .work-item {
         padding: 32px 28px;
         border-radius: 6px;
         background: $clr--white;
+        position: relative;
+
+        .icon {
+            width: 56px;
+            aspect-ratio: 1;
+            position: absolute;
+            top: -28px;
+            left: 32px;
+        }
 
         h3 {
             color: $clr--primary;
             font-size: 20px;
             font-weight: 800;
+            margin-top: 1.25rem;
         }
 
         p {
