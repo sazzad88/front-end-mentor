@@ -51,7 +51,7 @@ header {
     font-weight: 700;
     line-height: 28px;
     background: $clr--primary;
-    border-color: $clr--primary;
+    border-color: transparent;
     border-radius: 28px;
     display: flex;
     justify-content: center;
@@ -68,7 +68,6 @@ header {
         background: linear-gradient(180deg, #FF6F48 0%, $clr--bright 100%);
         padding: 0.75rem 2.25rem;
         align-self: baseline;
-        border-color: transparent;
 
         &:hover {
             background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
@@ -79,7 +78,6 @@ header {
         background: linear-gradient(180deg, #4851FF 0%, #F02AA6 100%);
         padding: 0.75rem 2.25rem;
         align-self: baseline;
-        border-color: transparent;
         border-top-color: #4851FF;
         border-bottom-color: #F02AA6;
 
@@ -97,7 +95,7 @@ header {
     padding: 1rem $mobile-side-padding;
     display: flex;
     flex-direction: column;
-
+    position: relative;
 
 
     h2 {
@@ -120,6 +118,15 @@ header {
 
     .mobile-hero {
         margin-top: 3rem;
+    }
+
+    .header {
+        max-width: 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2;
+        margin-bottom: 4rem;
     }
 
     @media (min-width: $tablet-min-screen) {
@@ -235,7 +242,7 @@ main {
     @media (min-width: $max-window-width) {
         padding: 1rem 0;
         gap: 2.5rem 1.25rem;
-        margin-top: 10rem;
+        margin-top: 14rem;
 
         .work-item {
             flex-basis: 32%;
@@ -287,8 +294,9 @@ footer {
 @media (min-width: $tablet-min-screen) {
     .tablet-hero {
         display: inline;
+        top: -40px;
         right: -200px;
-        max-width: 500px;
+        max-width: 550px;
     }
 }
 
@@ -299,8 +307,8 @@ footer {
 
     .desktop-hero {
         display: inline;
-        top: -120px;
-        right: -240px;
+        top: -84px;
+        right: -317px;
         max-width: 800px;
     }
 }
