@@ -1,0 +1,314 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+$mobile-screen: 275px;
+$tablet-min-screen: 768px;
+$tablet-max-screen: 991px;
+
+$desktop-screen : 1100px;
+
+$max-window-width : 1100px;
+$mobile-side-padding : 1rem;
+$tab-side-padding : 2.5rem;
+
+$clr--primary : #13183F;
+$clr-secondary : #83869A;
+$clr--white : #ffffff;
+$clr--bright : #F02AA6;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(180deg, #FFF 0%, #F0F1FF 100%);
+    overflow-x: hidden;
+}
+
+header {
+    padding: 1rem $mobile-side-padding;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: $max-window-width;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-min-screen) {
+        padding: 1rem $tab-side-padding;
+    }
+
+    @media (min-width: $max-window-width) {
+        padding: 1rem 0;
+    }
+}
+
+.btn {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 28px;
+    background: $clr--primary;
+    border-color: transparent;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $clr--white;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+        background: #666CA3;
+    }
+
+    &-highlight {
+        background: linear-gradient(180deg, #FF6F48 0%, $clr--bright 100%);
+        padding: 0.75rem 2.25rem;
+        align-self: baseline;
+
+        &:hover {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+        }
+    }
+
+    &-bright {
+        background: linear-gradient(180deg, #4851FF 0%, #F02AA6 100%);
+        padding: 0.75rem 2.25rem;
+        align-self: baseline;
+        border-top-color: #4851FF;
+        border-bottom-color: #F02AA6;
+
+        &:hover {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(180deg, #4851FF 0%, #F02AA6 100%);
+            border-top-color: rgba(255, 255, 255, 0.50);
+            border-bottom-color: rgba(255, 255, 255, 0.50);
+        }
+    }
+}
+
+.hero {
+    max-width: $max-window-width;
+    margin: 0 auto;
+    padding: 1rem $mobile-side-padding;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+
+    h2 {
+        color: $clr--primary;
+        font-size: 40px;
+        font-weight: 800;
+        margin: 1rem 0;
+    }
+
+    p {
+        color: $clr-secondary;
+        font-weight: 500;
+        line-height: 26px;
+    }
+
+    h2+p {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .mobile-hero {
+        margin-top: 3rem;
+    }
+
+    .header {
+        max-width: 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2;
+        margin-bottom: 4rem;
+    }
+
+    @media (min-width: $tablet-min-screen) {
+        padding: 1rem $tab-side-padding;
+
+        &>* {
+            max-width: 398px;
+        }
+
+        .mobile-hero {
+            display: none;
+        }
+    }
+
+    @media (min-width: $max-window-width) {
+        padding: 1rem 0;
+
+        &>* {
+            max-width: 460px;
+        }
+
+        h2 {
+            font-size: 56px;
+        }
+    }
+}
+
+main {
+    max-width: $max-window-width;
+    margin: 0 auto;
+    padding: 1rem $mobile-side-padding;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2.5rem 0.5rem;
+
+    .work-item-banner {
+        padding: 1.5rem 1.75rem;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 32px;
+        color: $clr--white;
+        border-radius: 6px;
+        background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+    }
+
+    .work-item {
+        padding: 32px 28px;
+        border-radius: 6px;
+        background: $clr--white;
+        position: relative;
+        flex-basis: 100%;
+
+        .icon {
+            width: 56px;
+            aspect-ratio: 1;
+            position: absolute;
+            top: -28px;
+            left: 32px;
+        }
+
+        h3 {
+            color: $clr--primary;
+            font-size: 20px;
+            font-weight: 800;
+            margin-top: 1.25rem;
+        }
+
+        p {
+            color: $clr-secondary;
+            font-weight: 500;
+            line-height: 26px;
+        }
+
+        h3+p {
+            margin: 1.5rem 0;
+        }
+
+        .start {
+            color: $clr--bright;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 28px;
+            text-decoration: none;
+        }
+    }
+
+    @media (min-width: $tablet-min-screen) {
+        padding: 1rem $tab-side-padding;
+        gap: 2.5rem 1rem;
+        margin-top: 5rem;
+
+        .work-item {
+            flex-basis: 48%;
+        }
+
+        .work-item-banner {
+            align-self: stretch;
+            flex-basis: 48%;
+            padding-top: 3.5rem;
+            padding-left: 2rem;
+        }
+    }
+
+    @media (min-width: $tablet-max-screen) {
+
+        .work-item,
+        .work-item-banner {
+            flex-basis: 49%;
+        }
+    }
+
+    @media (min-width: $max-window-width) {
+        padding: 1rem 0;
+        gap: 2.5rem 1.25rem;
+        margin-top: 14rem;
+
+        .work-item {
+            flex-basis: 32%;
+            align-self: stretch;
+        }
+
+        .work-item-banner {
+            flex-basis: 32%;
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+}
+
+.tablet-hero,
+.desktop-hero {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+
+
+footer {
+    background: $clr--primary;
+    margin-top: 4rem;
+
+    .wrapper {
+        max-width: $max-window-width;
+        margin: 0 auto;
+        padding: 2rem $mobile-side-padding;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        @media (min-width: $tablet-min-screen) {
+            padding: 2rem $tab-side-padding;
+        }
+
+        @media (min-width: $max-window-width) {
+            padding: 2rem 0;
+        }
+    }
+
+}
+
+@media (min-width: $tablet-min-screen) {
+    .tablet-hero {
+        display: inline;
+        top: -40px;
+        right: -200px;
+        max-width: 550px;
+    }
+}
+
+@media (min-width: $max-window-width) {
+    .tablet-hero {
+        display: none;
+    }
+
+    .desktop-hero {
+        display: inline;
+        top: -84px;
+        right: -317px;
+        max-width: 800px;
+    }
+}
