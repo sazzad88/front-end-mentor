@@ -24,6 +24,8 @@
     --max-width: 1200px;
 }
 
+$tablet-width : 768px;
+
 body {
     margin: 0;
     font-family: 'Manrope';
@@ -38,7 +40,6 @@ body {
 .hero {
     min-height: 550px;
     position: relative;
-    // padding: 2rem 1rem;
     overflow: hidden;
 
 
@@ -103,6 +104,23 @@ body {
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    @media (min-width: $tablet-width) {
+        min-height: 680px;
+
+        h2 {
+            font-size: 60px;
+            line-height: 60px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        img.image {
+            width: 480px;
+            transform: translateX(-50%);
+        }
     }
 
 
@@ -201,6 +219,21 @@ body {
                 line-height: 28px;
                 text-align: center;
                 // padding: 0 0.5rem;
+            }
+        }
+
+        @media (min-width: $tablet-width) {
+            flex-direction: row;
+            padding: 0 3rem;
+            gap: 2rem;
+
+            .info {
+                justify-content: start;
+                align-items: start;
+
+                .description {
+                    text-align: left;
+                }
             }
         }
     }
