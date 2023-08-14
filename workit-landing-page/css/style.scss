@@ -21,6 +21,7 @@
     --clr-text: #584D62;
     --clr-background: #FCF8FF;
     --mobile-side-margin: 0.75rem;
+    --tab-side-margin: 2.75rem;
     --max-width: 1200px;
 }
 
@@ -106,8 +107,19 @@ body {
         transform: translateX(-50%);
     }
 
+    .pattern-1,
+    .pattern-2 {
+        display: none;
+        position: absolute;
+        top: 0;
+    }
+
     @media (min-width: $tablet-width) {
         min-height: 680px;
+
+        header {
+            margin: 0 var(--tab-side-margin);
+        }
 
         h2 {
             font-size: 60px;
@@ -120,6 +132,18 @@ body {
         img.image {
             width: 480px;
             transform: translateX(-50%);
+        }
+
+        .pattern-1 {
+            display: inline;
+            top: 72px;
+            left: -200px;
+        }
+
+        .pattern-2 {
+            display: inline;
+            top: 280px;
+            right: -80px;
         }
     }
 
@@ -283,6 +307,60 @@ body {
             font-weight: 400;
             line-height: 28px;
             margin-bottom: 2rem;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .pattern {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        justify-content: flex-start;
+        margin: 0 var(--tab-side-margin);
+
+        img {
+            width: 320px;
+            height: 320px;
+        }
+
+        &--detail {
+            left: auto;
+            right: 0;
+            bottom: 50px;
+            width: 75%;
+            padding: 3.5rem;
+
+            .title {
+                font-size: 48px;
+                line-height: 56px;
+                text-align: left;
+            }
+
+            .description {
+                text-align: left;
+            }
+
+            p {
+                text-align: left;
+            }
+
+            .pattern {
+                display: inline;
+                bottom: -112px;
+                right: 42px;
+
+                img {
+                    width: 250px;
+                    height: 250px;
+                }
+            }
         }
     }
 }
