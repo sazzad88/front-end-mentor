@@ -78,6 +78,10 @@ body {
             width: fit-content;
             border-color: var(--clr-light-green);
             letter-spacing: -0.16px;
+
+            &:hover {
+                color: var(--clr-light-green);
+            }
         }
 
 
@@ -195,8 +199,14 @@ body {
     letter-spacing: -0.16px;
     padding: .75rem 1.5rem;
     background: var(--clr-light-green);
+    border: 2px solid var(--clr-light-green);
     text-decoration: none;
     cursor: pointer;
+
+    &:hover {
+        background: var(--clr-primary);
+        color: var(--clr-light-green);
+    }
 }
 
 .action-points-wrapper {

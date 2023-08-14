@@ -69,6 +69,9 @@ body {
   border-color: var(--clr-light-green);
   letter-spacing: -0.16px;
 }
+.hero header .apply:hover {
+  color: var(--clr-light-green);
+}
 .hero h2 {
   font-family: "Fraunces", sans-serif;
   color: var(--clr-white);
@@ -163,8 +166,13 @@ body {
   letter-spacing: -0.16px;
   padding: 0.75rem 1.5rem;
   background: var(--clr-light-green);
+  border: 2px solid var(--clr-light-green);
   text-decoration: none;
   cursor: pointer;
+}
+.btn:hover {
+  background: var(--clr-primary);
+  color: var(--clr-light-green);
 }
 
 .action-points-wrapper {
