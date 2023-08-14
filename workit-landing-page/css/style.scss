@@ -20,7 +20,8 @@
     --clr-white: #ffffff;
     --clr-text: #584D62;
     --clr-background: #FCF8FF;
-    --mobile-side-margin: 1rem;
+    --mobile-side-margin: 0.75rem;
+    --max-width: 1200px;
 }
 
 body {
@@ -57,8 +58,9 @@ body {
 
     header {
         display: flex;
-        max-width: 1200px;
-        margin: 0 auto;
+        max-width: var(--max-width);
+        padding-top: 1rem;
+        margin: 0 var(--mobile-side-margin);
         justify-content: space-between;
         align-items: center;
 
@@ -131,6 +133,8 @@ body {
     position: relative;
     overflow: hidden;
     margin-top: -120px;
+    margin-bottom: 80px;
+    padding-bottom: 100px;
 
     &::before {
         content: "";
@@ -151,6 +155,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 0 var(--mobile-side-margin);
 
         &:nth-of-type(1) {
             margin-top: 12rem;
@@ -195,12 +200,56 @@ body {
                 font-weight: 400;
                 line-height: 28px;
                 text-align: center;
-                padding: 0 0.5rem;
+                // padding: 0 0.5rem;
             }
         }
     }
 
     .action-point-item+.action-point-item {
-        margin-top: 2rem;
+        margin-top: 4rem;
+    }
+}
+
+.testimonial {
+    max-width: var(--max-width);
+    margin: 0 var(--mobile-side-margin);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 600px;
+
+
+    img {
+        width: 250px;
+        height: 250px;
+    }
+
+    &--detail {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: var(--clr-primary);
+        color: var(--clr-white);
+        min-height: 375px;
+        padding: 32px;
+
+
+        .title {
+            text-align: center;
+            font-family: 'Fraunces';
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 48px;
+        }
+
+        .description {
+            text-align: center;
+            font-family: 'Manrope';
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            margin-bottom: 2rem;
+        }
     }
 }
