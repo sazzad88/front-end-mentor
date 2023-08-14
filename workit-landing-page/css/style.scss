@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url(../assets/fonts/manrope/Manrope-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Fraunces;
+    src: url(../assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+
+
+
+:root {
+    --clr-primary: #24053E;
+    --clr-light-green: #44FFA1;
+    --clr-white: #ffffff;
+    --mobile-side-margin: 1rem;
+}
+
+body {
+    margin: 0;
+}
+
+
+.hero {
+    min-height: 480px;
+    position: relative;
+    overflow-x: hidden;
+    padding: 2rem 1rem;
+
+
+    &::before {
+        content: "";
+        border-bottom-left-radius: 100% 25%;
+        border-bottom-right-radius: 100% 25%;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        background-color: var(--clr-primary);
+        height: 78%;
+        transform: scale(1.5);
+    }
+
+    header {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+
+        .apply {
+            font-family: 'Manpore', sans-serif;
+            color: var(--clr-white);
+            font-weight: 700;
+            line-height: 32px;
+            text-decoration: none;
+            border-bottom-style: solid;
+            border-bottom-width: 3px;
+            width: fit-content;
+            border-color: var(--clr-light-green);
+            letter-spacing: -0.16px;
+        }
+
+
+    }
+
+    h2 {
+        font-family: 'Fraunces', sans-serif;
+        color: var(--clr-white);
+        font-size: 46px;
+        font-weight: 600;
+        line-height: 50px;
+        text-align: center;
+        margin: 5rem 0 4rem 0;
+
+        .highlight {
+            border-bottom-style: solid;
+            border-bottom-width: 3px;
+            width: fit-content;
+            border-color: var(--clr-light-green);
+        }
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+.btn {
+    color: var(--clr-primary);
+    text-align: center;
+    font-family: 'Manrope';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.16px;
+    padding: .75rem 1.5rem;
+    background: var(--clr-light-green);
+    text-decoration: none;
+    cursor: pointer;
+}
