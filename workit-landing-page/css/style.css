@@ -217,4 +217,20 @@ body {
   margin-bottom: 2rem;
 }
 
+footer {
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 2rem;
+}
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
 /*# sourceMappingURL=style.css.map */
