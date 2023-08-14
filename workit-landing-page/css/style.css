@@ -22,9 +22,8 @@ body {
 }
 
 .hero {
-  min-height: 480px;
+  min-height: 550px;
   position: relative;
-  overflow-x: hidden;
   padding: 2rem 1rem;
 }
 .hero::before {
@@ -72,6 +71,13 @@ body {
   border-bottom-width: 3px;
   width: fit-content;
   border-color: var(--clr-light-green);
+}
+.hero img.image {
+  width: 300px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .center {
