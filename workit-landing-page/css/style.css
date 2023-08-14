@@ -18,7 +18,7 @@
   --clr-background: #FCF8FF;
   --mobile-side-margin: 0.75rem;
   --tab-side-margin: 2.75rem;
-  --max-width: 1200px;
+  --max-width: 1114px;
 }
 
 body {
@@ -52,7 +52,7 @@ body {
 .hero header {
   display: flex;
   max-width: var(--max-width);
-  padding-top: 1rem;
+  padding-top: 2rem;
   margin: 0 var(--mobile-side-margin);
   justify-content: space-between;
   align-items: center;
@@ -126,6 +126,28 @@ body {
     right: -80px;
   }
 }
+@media (min-width: 768px) {
+  .hero {
+    min-height: 760px;
+  }
+  .hero::before {
+    transform: translateY(-10%) scale(7);
+  }
+  .hero header {
+    margin: 0 var(--tab-side-margin);
+  }
+  .hero img.image {
+    width: 550px;
+  }
+}
+@media (min-width: 1114px) {
+  .hero header {
+    margin: 0 auto;
+  }
+  .hero img.image {
+    width: 600px;
+  }
+}
 
 .center {
   text-align: center;
@@ -145,16 +167,14 @@ body {
   cursor: pointer;
 }
 
-.action-points {
-  display: flex;
-  flex-direction: column;
+.action-points-wrapper {
   position: relative;
   overflow: hidden;
   margin-top: -120px;
   margin-bottom: 80px;
   padding-bottom: 100px;
 }
-.action-points::before {
+.action-points-wrapper::before {
   content: "";
   content: "";
   position: absolute;
@@ -166,6 +186,16 @@ body {
   border-radius: 50%;
   transform-origin: bottom;
   transform: translateY(-10%) scale(10);
+}
+@media (min-width: 1114px) {
+  .action-points-wrapper::before {
+    transform: translateY(-10%) scale(7);
+  }
+}
+
+.action-points {
+  display: flex;
+  flex-direction: column;
 }
 .action-points .action-point-item {
   display: flex;
@@ -227,6 +257,32 @@ body {
 }
 .action-points .action-point-item + .action-point-item {
   margin-top: 4rem;
+}
+@media (min-width: 1114px) {
+  .action-points {
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding-top: 15rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .action-points .action-point-item {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+  .action-points .action-point-item:nth-of-type(1) {
+    margin-top: 0;
+  }
+  .action-points .action-point-item .info {
+    justify-content: center;
+    align-items: center;
+  }
+  .action-points .action-point-item .info .description {
+    text-align: center;
+  }
+  .action-points .action-point-item + .action-point-item {
+    margin: 0;
+  }
 }
 
 .testimonial {
@@ -298,6 +354,7 @@ body {
   }
   .testimonial--detail .description {
     text-align: left;
+    max-width: 402px;
   }
   .testimonial--detail p {
     text-align: left;
@@ -310,6 +367,15 @@ body {
   .testimonial--detail .pattern img {
     width: 250px;
     height: 250px;
+  }
+}
+@media (min-width: 1114px) {
+  .testimonial {
+    margin: 0 auto;
+    max-width: var(--max-width);
+  }
+  .testimonial .description {
+    max-width: 522px;
   }
 }
 

@@ -22,10 +22,11 @@
     --clr-background: #FCF8FF;
     --mobile-side-margin: 0.75rem;
     --tab-side-margin: 2.75rem;
-    --max-width: 1200px;
+    --max-width: 1114px;
 }
 
 $tablet-width : 768px;
+$desktop-width : 1114px;
 
 body {
     margin: 0;
@@ -61,7 +62,7 @@ body {
     header {
         display: flex;
         max-width: var(--max-width);
-        padding-top: 1rem;
+        padding-top: 2rem;
         margin: 0 var(--mobile-side-margin);
         justify-content: space-between;
         align-items: center;
@@ -147,6 +148,35 @@ body {
         }
     }
 
+    @media (min-width: $tablet-width) {
+
+        &::before {
+            transform: translateY(-10%) scale(7);
+        }
+
+        min-height: 760px;
+
+        header {
+            margin: 0 var(--tab-side-margin);
+        }
+
+        img.image {
+            width: 550px;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+
+
+        header {
+            margin: 0 auto;
+        }
+
+        img.image {
+            width: 600px;
+        }
+    }
+
 
 
 }
@@ -169,14 +199,13 @@ body {
     cursor: pointer;
 }
 
-.action-points {
-    display: flex;
-    flex-direction: column;
+.action-points-wrapper {
     position: relative;
     overflow: hidden;
     margin-top: -120px;
     margin-bottom: 80px;
     padding-bottom: 100px;
+
 
     &::before {
         content: "";
@@ -192,6 +221,21 @@ body {
         transform: translateY(-10%) scale(10);
     }
 
+    @media (min-width: $desktop-width) {
+
+        &::before {
+            transform: translateY(-10%) scale(7);
+        }
+    }
+}
+
+.action-points {
+    display: flex;
+    flex-direction: column;
+
+
+
+
     .action-point-item {
         display: flex;
         flex-direction: column;
@@ -202,8 +246,6 @@ body {
         &:nth-of-type(1) {
             margin-top: 12rem;
         }
-
-
 
         .number {
             span {
@@ -260,11 +302,46 @@ body {
                 }
             }
         }
+
     }
 
     .action-point-item+.action-point-item {
         margin-top: 4rem;
     }
+
+    @media (min-width: $desktop-width) {
+        margin: 0 auto;
+        max-width: var(--max-width);
+        padding-top: 15rem;
+        flex-direction: row;
+        justify-content: space-between;
+
+
+
+        .action-point-item {
+            flex-direction: column;
+            padding: 0 2rem;
+
+            &:nth-of-type(1) {
+                margin-top: 0;
+            }
+
+            .info {
+                justify-content: center;
+                align-items: center;
+
+                .description {
+                    text-align: center;
+                }
+            }
+        }
+
+        .action-point-item+.action-point-item {
+            margin: 0;
+        }
+    }
+
+
 }
 
 .testimonial {
@@ -345,6 +422,7 @@ body {
 
             .description {
                 text-align: left;
+                max-width: 402px;
             }
 
             p {
@@ -361,6 +439,15 @@ body {
                     height: 250px;
                 }
             }
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        margin: 0 auto;
+        max-width: var(--max-width);
+
+        .description {
+            max-width: 522px;
         }
     }
 }
