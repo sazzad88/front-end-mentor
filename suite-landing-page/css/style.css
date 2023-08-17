@@ -35,6 +35,14 @@ header {
     margin: 2.5rem var(--tab-side-space);
   }
 }
+@media (min-width: 1110px) {
+  header {
+    max-width: 1110px;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
 
 .btn {
   font-size: 14px;
@@ -50,6 +58,7 @@ header {
     font-size: 16px;
     line-height: 32px;
     letter-spacing: -0.16px;
+    padding: 16px 32px;
   }
 }
 .btn-white {
@@ -161,6 +170,7 @@ header {
     line-height: 64px;
     letter-spacing: -0.778px;
     max-width: 570px;
+    margin: 2.5rem 0;
   }
   .hero-area .text-section .title .highlight {
     margin-left: 0.75rem;
@@ -172,6 +182,7 @@ header {
   }
   .hero-area .text-section .description {
     max-width: 350px;
+    margin: 2.5rem 0;
   }
   .hero-area .hero-image {
     position: absolute;
@@ -186,6 +197,46 @@ header {
   }
   .hero-area .hero-image .tab {
     display: inline;
+  }
+}
+@media (min-width: 1110px) {
+  .hero-area {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+  .hero-area .text-section {
+    flex-basis: 60%;
+  }
+  .hero-area .text-section .title {
+    font-size: 72px;
+    line-height: 78px;
+    letter-spacing: -1px;
+    max-width: 700px;
+  }
+  .hero-area .text-section .title .highlight {
+    margin-left: 1rem;
+    font-size: 80px;
+  }
+  .hero-area .text-section .title .highlight img {
+    width: 300px;
+    margin-bottom: 1.5rem;
+  }
+  .hero-area .text-section .description {
+    margin-bottom: 3.5rem;
+  }
+  .hero-area .stat {
+    flex-direction: column;
+    flex-basis: 25%;
+  }
+  .hero-area .stat-item {
+    justify-content: start;
+    align-items: flex-start;
+  }
+  .hero-area .hero-image {
+    right: 300px;
+    width: 300px;
   }
 }
 

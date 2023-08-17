@@ -38,6 +38,13 @@ header {
     @media (min-width: $tab-width) {
         margin: 2.5rem var(--tab-side-space);
     }
+
+    @media (min-width: $desktop-width) {
+        max-width: $desktop-width;
+        margin: 0 auto;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
 }
 
 .btn {
@@ -53,6 +60,7 @@ header {
         font-size: 16px;
         line-height: 32px;
         letter-spacing: -0.16px;
+        padding: 16px 32px;
     }
 
 
@@ -182,11 +190,11 @@ header {
                 line-height: 64px;
                 letter-spacing: -0.778px;
                 max-width: 570px;
+                margin: 2.5rem 0;
 
                 .highlight {
                     margin-left: .75rem;
                     font-size: 62px;
-
 
                     img {
                         width: 250px;
@@ -197,6 +205,7 @@ header {
 
             .description {
                 max-width: 350px;
+                margin: 2.5rem 0;
             }
         }
 
@@ -215,6 +224,54 @@ header {
             .tab {
                 display: inline;
             }
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+        max-width: $desktop-width;
+        margin: 0 auto;
+
+        .text-section {
+            flex-basis: 60%;
+
+            .title {
+                font-size: 72px;
+                line-height: 78px;
+                letter-spacing: -1px;
+                max-width: 700px;
+
+                .highlight {
+                    margin-left: 1rem;
+                    font-size: 80px;
+
+                    img {
+                        width: 300px;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+
+            .description {
+                margin-bottom: 3.5rem;
+            }
+        }
+
+        .stat {
+            flex-direction: column;
+            flex-basis: 25%;
+
+            &-item {
+                justify-content: start;
+                align-items: flex-start;
+            }
+        }
+
+        .hero-image {
+            right: 300px;
+            width: 300px;
         }
     }
 }
