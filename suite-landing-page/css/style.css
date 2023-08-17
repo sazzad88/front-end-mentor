@@ -67,6 +67,9 @@ header {
 .hero-area {
   margin: 1.5rem 1rem;
 }
+.hero-area .text-section {
+  margin: 2.5rem 0;
+}
 .hero-area .text-section .title {
   color: var(--clr-blue-primary);
   font-size: 38px;
@@ -89,6 +92,35 @@ header {
 }
 .hero-area .text-section .description {
   margin: 2rem 0;
+  color: var(--clr-grey);
+}
+.hero-area .stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  margin-top: 3rem;
+}
+.hero-area .stat-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  line-height: 26px;
+  letter-spacing: 2.5px;
+}
+.hero-area .stat-item .title {
+  color: var(--clr-blue-primary);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  margin: 0;
+}
+.hero-area .stat-item p {
+  margin: 0;
+  color: var(--clr-grey);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -77,6 +77,8 @@ header {
     margin: 1.5rem 1rem;
 
     .text-section {
+        margin: 2.5rem 0;
+
         .title {
             color: var(--clr-blue-primary);
             font-size: 38px;
@@ -103,6 +105,40 @@ header {
 
         .description {
             margin: 2rem 0;
+            color: var(--clr-grey);
+        }
+    }
+
+    .stat {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3.5rem;
+        margin-top: 3rem;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-transform: uppercase;
+            line-height: 26px;
+            letter-spacing: 2.5px;
+
+            .title {
+                color: var(--clr-blue-primary);
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 56px;
+                margin: 0;
+            }
+
+            p {
+                margin: 0;
+                color: var(--clr-grey);
+            }
         }
     }
 }
