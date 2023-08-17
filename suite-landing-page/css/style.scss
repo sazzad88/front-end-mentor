@@ -32,8 +32,12 @@ img {
 }
 
 header {
-    margin: 1.5rem 1rem;
+    margin: 1.5rem var(--mobile-side-space);
     max-width: $desktop-width;
+
+    @media (min-width: $tab-width) {
+        margin: 2.5rem var(--tab-side-space);
+    }
 }
 
 .btn {
@@ -45,6 +49,14 @@ header {
     text-decoration: none;
     border-radius: 6px;
 
+    @media (min-width: $tab-width) {
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: -0.16px;
+    }
+
+
+
     &-white {
         color: var(--clr-blue-primary);
         border: 1px solid var(--clr-blue-primary);
@@ -54,7 +66,10 @@ header {
         color: var(--clr-off-white-1);
         border: 1px solid var(--clr-blue-primary);
         background: var(--clr-blue-primary);
-
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: -0.18px;
     }
 }
 
@@ -74,6 +89,7 @@ header {
 }
 
 .hero-area {
+    position: relative;
     margin: 1.5rem 1rem;
 
     .text-section {
@@ -109,6 +125,12 @@ header {
         }
     }
 
+    .hero-image {
+        .tab {
+            display: none;
+        }
+    }
+
     .stat {
         display: flex;
         flex-direction: column;
@@ -138,6 +160,60 @@ header {
             p {
                 margin: 0;
                 color: var(--clr-grey);
+            }
+        }
+
+        @media (min-width: $tab-width) {
+            flex-direction: row;
+            flex-basis: 100%;
+            margin: 5rem 0;
+        }
+    }
+
+    @media (min-width: $tab-width) {
+        margin: 2.5rem var(--tab-side-space);
+        display: flex;
+        flex-wrap: wrap;
+
+        .text-section {
+            .title {
+                font-size: 56px;
+                font-weight: 400;
+                line-height: 64px;
+                letter-spacing: -0.778px;
+                max-width: 570px;
+
+                .highlight {
+                    margin-left: .75rem;
+                    font-size: 62px;
+
+
+                    img {
+                        width: 250px;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+
+            .description {
+                max-width: 350px;
+            }
+        }
+
+        .hero-image {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            width: 264px;
+            top: 48px;
+
+            .mobile {
+                display: none;
+            }
+
+            .tab {
+                display: inline;
             }
         }
     }
