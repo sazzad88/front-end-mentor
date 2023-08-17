@@ -3,6 +3,8 @@
   --clr-grey: #49566D;
   --clr-off-white-1: #FAF8F6;
   --clr-off-white-2: #F3EDE7;
+  --mobile-side-space: 1rem;
+  --tab-side-space: 2.5rem;
 }
 
 *,
