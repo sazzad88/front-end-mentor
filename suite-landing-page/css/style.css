@@ -65,6 +65,11 @@ header {
   color: var(--clr-blue-primary);
   border: 1px solid var(--clr-blue-primary);
 }
+.btn-white:hover {
+  color: var(--clr-off-white-1);
+  border: 1px solid var(--clr-blue-primary);
+  background: var(--clr-blue-primary);
+}
 .btn-primary {
   color: var(--clr-off-white-1);
   border: 1px solid var(--clr-blue-primary);
@@ -73,6 +78,10 @@ header {
   font-weight: 700;
   line-height: 32px;
   letter-spacing: -0.18px;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #A060FF 0%, #CB30E3 49.21%, #FFA84E 100%);
+  border-color: #CB30E3;
 }
 
 .logo-section {
@@ -327,13 +336,27 @@ header {
   letter-spacing: 0.083px;
 }
 .footer-section footer .social-media {
+  list-style-type: none;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
 }
+.footer-section footer .social-media li,
 .footer-section footer .social-media img {
   width: 20px;
+  height: 20px;
+  position: relative;
+}
+.footer-section footer .social-media li:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(23, 35, 57, 0.2);
 }
 @media (min-width: 768px) {
   .footer-section {
