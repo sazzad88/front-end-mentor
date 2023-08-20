@@ -249,7 +249,7 @@ header {
   min-height: 20rem;
   background: var(--clr-blue-primary);
   border-radius: 6px;
-  padding: var(--mobile-side-space);
+  padding: 0 var(--mobile-side-space);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -259,15 +259,20 @@ header {
 .footer-section .testimonial-section .person {
   margin-top: -190px;
 }
+.footer-section .testimonial-section .person .large {
+  display: none;
+}
 .footer-section .testimonial-section .pattern {
   width: 50px;
+}
+.footer-section .testimonial-section .testimonial {
+  text-align: center;
 }
 .footer-section .testimonial-section .testimonial .title {
   color: var(--clr-off-white-1);
   font-size: 36px;
   line-height: 48px;
   letter-spacing: -0.417px;
-  text-align: center;
   margin-top: 1rem;
 }
 .footer-section .testimonial-section .testimonial .title strong {
@@ -276,7 +281,6 @@ header {
 }
 .footer-section .testimonial-section .testimonial .description {
   color: var(--clr-off-white-2);
-  text-align: center;
   font-size: 18px;
   font-weight: 400;
   line-height: 32px;
@@ -284,7 +288,6 @@ header {
 }
 .footer-section .testimonial-section .testimonial .name h4 {
   color: var(--clr-off-white-1);
-  text-align: center;
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
@@ -294,7 +297,6 @@ header {
 }
 .footer-section .testimonial-section .testimonial .name p {
   color: var(--clr-off-white-2);
-  text-align: center;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
@@ -309,6 +311,53 @@ header {
   }
   .footer-section .testimonial-section {
     margin-top: -254px;
+  }
+}
+@media (min-width: 1110px) {
+  .footer-section {
+    min-height: 30rem;
+    margin-top: 25rem;
+  }
+  .footer-section .testimonial-section {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 6.5rem;
+    margin-top: -312px;
+    flex-direction: row;
+    max-height: 35rem;
+  }
+  .footer-section .testimonial-section .person {
+    margin-top: 0;
+    margin-bottom: 42px;
+  }
+  .footer-section .testimonial-section .person .small {
+    display: none;
+  }
+  .footer-section .testimonial-section .person .large {
+    display: inline;
+    width: 375px;
+  }
+  .footer-section .testimonial-section .pattern {
+    margin-bottom: 200px;
+  }
+  .footer-section .testimonial-section .testimonial {
+    text-align: left;
+  }
+  .footer-section .testimonial-section .testimonial .title {
+    color: var(--clr-off-white-1);
+    font-size: 42px;
+    line-height: 56px;
+    letter-spacing: -0.5px;
+  }
+  .footer-section .testimonial-section .testimonial .title strong {
+    font-size: 48px;
+    font-weight: 700;
+  }
+  .footer-section .testimonial-section .testimonial .description {
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: 0.1px;
+    max-width: 350px;
   }
 }
 
