@@ -275,3 +275,77 @@ header {
         }
     }
 }
+
+.footer-section {
+    background-color: var(--clr-off-white-2);
+    min-height: 15rem;
+    margin-top: 15rem;
+
+    .testimonial-section {
+        min-height: 20rem;
+        background: var(--clr-blue-primary);
+        border-radius: 6px;
+        padding: var(--mobile-side-space);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+
+        .person {
+            margin-top: -190px;
+        }
+
+        .pattern {
+            width: 50px;
+        }
+
+        .testimonial {
+            .title {
+                color: var(--clr-off-white-1);
+                font-size: 36px;
+                line-height: 48px;
+                letter-spacing: -0.417px;
+                text-align: center;
+
+                strong {
+                    font-size: 40px;
+                    font-weight: 700;
+                }
+            }
+
+            .description {
+                color: var(--clr-off-white-2);
+                text-align: center;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 32px;
+                letter-spacing: 0.09px;
+            }
+
+            .name {
+                h4 {
+                    color: var(--clr-off-white-1);
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 32px;
+                    letter-spacing: -0.18px;
+                    margin-top: 2rem;
+                    margin-bottom: 0;
+                }
+
+                p {
+                    color: var(--clr-off-white-2);
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 26px;
+                    letter-spacing: 2.5px;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

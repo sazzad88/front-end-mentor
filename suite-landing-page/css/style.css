@@ -240,4 +240,65 @@ header {
   }
 }
 
+.footer-section {
+  background-color: var(--clr-off-white-2);
+  min-height: 15rem;
+  margin-top: 15rem;
+}
+.footer-section .testimonial-section {
+  min-height: 20rem;
+  background: var(--clr-blue-primary);
+  border-radius: 6px;
+  padding: var(--mobile-side-space);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+.footer-section .testimonial-section .person {
+  margin-top: -190px;
+}
+.footer-section .testimonial-section .pattern {
+  width: 50px;
+}
+.footer-section .testimonial-section .testimonial .title {
+  color: var(--clr-off-white-1);
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: -0.417px;
+  text-align: center;
+}
+.footer-section .testimonial-section .testimonial .title strong {
+  font-size: 40px;
+  font-weight: 700;
+}
+.footer-section .testimonial-section .testimonial .description {
+  color: var(--clr-off-white-2);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.09px;
+}
+.footer-section .testimonial-section .testimonial .name h4 {
+  color: var(--clr-off-white-1);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.18px;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+.footer-section .testimonial-section .testimonial .name p {
+  color: var(--clr-off-white-2);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 2.5px;
+  margin-top: 0;
+}
+
 /*# sourceMappingURL=style.css.map */
