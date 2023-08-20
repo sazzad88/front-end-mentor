@@ -278,7 +278,7 @@ header {
 
 .footer-section {
     background-color: var(--clr-off-white-2);
-    min-height: 15rem;
+    min-height: 50rem;
     margin-top: 15rem;
 
     .testimonial-section {
@@ -308,6 +308,7 @@ header {
                 line-height: 48px;
                 letter-spacing: -0.417px;
                 text-align: center;
+                margin-top: 1rem;
 
                 strong {
                     font-size: 40px;
@@ -346,6 +347,16 @@ header {
                     margin-top: 0;
                 }
             }
+        }
+    }
+
+    @media (min-width: $tab-width) {
+        min-height: 40rem;
+        margin-top: 25rem;
+        padding: var(--tab-side-space);
+
+        .testimonial-section {
+            margin-top: -254px;
         }
     }
 }

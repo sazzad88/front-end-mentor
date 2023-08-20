@@ -242,7 +242,7 @@ header {
 
 .footer-section {
   background-color: var(--clr-off-white-2);
-  min-height: 15rem;
+  min-height: 50rem;
   margin-top: 15rem;
 }
 .footer-section .testimonial-section {
@@ -268,6 +268,7 @@ header {
   line-height: 48px;
   letter-spacing: -0.417px;
   text-align: center;
+  margin-top: 1rem;
 }
 .footer-section .testimonial-section .testimonial .title strong {
   font-size: 40px;
@@ -299,6 +300,16 @@ header {
   line-height: 26px;
   letter-spacing: 2.5px;
   margin-top: 0;
+}
+@media (min-width: 768px) {
+  .footer-section {
+    min-height: 40rem;
+    margin-top: 25rem;
+    padding: var(--tab-side-space);
+  }
+  .footer-section .testimonial-section {
+    margin-top: -254px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
