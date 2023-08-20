@@ -340,9 +340,14 @@ header {
     min-height: 40rem;
     margin-top: 25rem;
     padding: var(--tab-side-space);
+    padding-bottom: 0;
   }
   .footer-section .testimonial-section {
-    margin-top: -254px;
+    margin-top: -246px;
+  }
+  .footer-section footer {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 @media (min-width: 1110px) {
@@ -390,6 +395,10 @@ header {
     line-height: 35px;
     letter-spacing: 0.1px;
     max-width: 350px;
+  }
+  .footer-section footer {
+    max-width: 1110px;
+    margin: 0 auto;
   }
 }
 

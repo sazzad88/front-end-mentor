@@ -404,15 +404,21 @@ header {
         margin-top: 25rem;
         padding: var(--tab-side-space);
 
+        padding-bottom: 0;
+
         .testimonial-section {
-            margin-top: -254px;
+            margin-top: -246px;
+        }
+
+
+
+        footer {
+            flex-direction: row;
+            justify-content: space-between;
         }
     }
 
     @media (min-width: $desktop-width) {
-
-
-
 
         min-height: 30rem;
         margin-top: 25rem;
@@ -468,6 +474,11 @@ header {
                 }
             }
 
+        }
+
+        footer {
+            max-width: $desktop-width;
+            margin: 0 auto;
         }
     }
 }
