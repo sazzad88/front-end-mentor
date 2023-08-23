@@ -14,6 +14,7 @@
   --mobile-space: 1.5rem;
   --tab-space: 2.5rem;
   --desktop-space: 116px;
+  --max-width: 564;
 }
 
 body {
@@ -27,6 +28,10 @@ div {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
+}
+
+img {
+  width: 100%;
 }
 
 .header {
@@ -82,6 +87,37 @@ div {
   }
   .header p {
     max-width: 464px;
+  }
+}
+
+.means-info {
+  padding: 0 var(--mobile-space);
+}
+.means-info h2 {
+  margin: 32px 0;
+  color: var(--clr-header);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -1.6px;
+}
+@media (min-width: 768px) {
+  .means {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-between;
+    padding-right: var(--tab-space);
+    overflow: hidden;
+  }
+  .means img {
+    width: 360px;
+    margin-left: -60px;
+  }
+  .means-info {
+    max-width: 372px;
+  }
+  .means-info h2 {
+    margin-top: 0;
   }
 }
 
