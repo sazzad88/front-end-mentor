@@ -174,11 +174,13 @@ img {
 }
 
 .bmi-todos {
-    padding: 0 var(--mobile-space);
+    background: linear-gradient(315deg, #D6E6FE 0%, rgba(214, 252, 254, 0.00) 100%);
+    padding: 3.5rem var(--mobile-space);
     margin-top: 10rem;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+
 
     img {
         width: 64px;
@@ -197,6 +199,15 @@ img {
                 margin-top: 0;
                 margin-bottom: 24px;
             }
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        padding: 3.5rem var(--tab-space);
+
+        .todo {
+            flex-direction: row;
+            gap: 2.5rem;
         }
     }
 }
