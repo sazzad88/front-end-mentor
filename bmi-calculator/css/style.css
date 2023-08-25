@@ -278,5 +278,31 @@ img {
     align-self: normal;
   }
 }
+@media (min-width: 1114px) {
+  .bmi-limitation {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
+  .bmi-limitation-header-section {
+    max-width: 564px;
+    text-align: left;
+  }
+  .bmi-limitation-points-section {
+    z-index: -1;
+    position: relative;
+    margin-top: -220px;
+  }
+  .bmi-limitation-item {
+    max-width: 365px;
+    padding: 2rem;
+  }
+  .bmi-limitation-item:nth-of-type(1) {
+    margin-left: 600px;
+  }
+  .bmi-limitation-item:nth-of-type(2) {
+    margin-left: 350px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
