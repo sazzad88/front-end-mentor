@@ -257,3 +257,51 @@ img {
 
     }
 }
+
+.bmi-limitation {
+    position: relative;
+    padding: 0 var(--mobile-space);
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    &-header-section {
+        margin-bottom: 4rem;
+
+        h2 {
+            margin: 32px 0;
+            color: var(--clr-header);
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 110%;
+            letter-spacing: -1.6px;
+        }
+    }
+
+    &-points {
+        display: flex;
+        flex-direction: column;
+
+        &-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+    &-item {
+        border-radius: 16px;
+        box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+        padding: 1rem;
+
+        img {
+            width: 32px;
+            margin-right: 1rem;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
