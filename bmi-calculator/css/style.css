@@ -259,5 +259,24 @@ img {
   display: flex;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .bmi-limitation {
+    padding: 0 var(--tab-space);
+  }
+  .bmi-limitation-header-section {
+    text-align: center;
+  }
+  .bmi-limitation-points-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .bmi-limitation-item {
+    flex-basis: 45%;
+    align-self: normal;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

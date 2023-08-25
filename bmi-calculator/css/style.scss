@@ -287,6 +287,8 @@ img {
             flex-direction: column;
             gap: 2rem;
         }
+
+
     }
 
     &-item {
@@ -302,6 +304,28 @@ img {
         .title {
             display: flex;
             align-items: center;
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        padding: 0 var(--tab-space);
+
+        &-header-section {
+            text-align: center;
+        }
+
+
+        &-points-section {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        &-item {
+            flex-basis: 45%;
+            align-self: normal;
         }
     }
 }
