@@ -52,6 +52,7 @@ img {
     padding: 0 var(--mobile-space);
     background: transparent;
     margin-top: -664px;
+    position: relative;
 
     img {
         margin: 32px 0;
@@ -66,6 +67,27 @@ img {
         line-height: 110%;
         letter-spacing: -2.4px;
         text-align: center;
+    }
+
+    .calculator {
+        position: absolute;
+        bottom: -378px;
+        left: 50%;
+        min-height: 350px;
+        width: 86%;
+        padding: 24px;
+        background: white;
+        border-radius: 12px;
+        transform: translateX(-50%);
+        box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -1.2px;
+            text-align: left;
+        }
     }
 
     @media (min-width: $tablet-width) {
@@ -111,6 +133,7 @@ img {
 
 .means {
 
+    margin-top: 40rem;
 
     &-info {
         padding: 0 var(--mobile-space);
@@ -174,7 +197,6 @@ img {
 }
 
 .bmi-todos {
-
     margin: 2rem 0;
     position: relative;
     overflow: hidden;
