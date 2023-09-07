@@ -93,7 +93,7 @@ input[type=text]:focus {
 }
 .header .calculator {
   position: absolute;
-  bottom: -540px;
+  bottom: -640px;
   left: 50%;
   min-height: 350px;
   width: 86%;
@@ -173,6 +173,20 @@ input[type=text]:focus {
     margin: 75px 0;
     width: 64px;
   }
+  .header .calculator {
+    bottom: -375px;
+    width: 92%;
+  }
+  .header .calculator .result-section {
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .calculator .result-section .value-detail {
+    width: 270px;
+  }
 }
 @media (min-width: 1114px) {
   .header {
@@ -215,7 +229,7 @@ input[type=text]:focus {
 }
 @media (min-width: 768px) {
   .means {
-    margin-top: 10rem;
+    margin-top: 32rem;
     display: flex;
     justify-content: space-between;
     padding-right: var(--tab-space);

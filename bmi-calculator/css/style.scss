@@ -102,7 +102,7 @@ input[type='text'] {
 
     .calculator {
         position: absolute;
-        bottom: -540px;
+        bottom: -640px;
         left: 50%;
         min-height: 350px;
         width: 86%;
@@ -202,6 +202,26 @@ input[type='text'] {
             margin: 75px 0;
             width: 64px;
         }
+
+        .calculator {
+            bottom: -375px;
+            width: 92%;
+
+            .result-section {
+                border-top-right-radius: 999px;
+                border-bottom-right-radius: 999px;
+
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .value-detail {
+                    width: 270px;
+                }
+
+            }
+        }
     }
 
     @media (min-width: $desktop-width) {
@@ -253,7 +273,7 @@ input[type='text'] {
     }
 
     @media (min-width: $tablet-width) {
-        margin-top: 10rem;
+        margin-top: 32rem;
         display: flex;
         justify-content: space-between;
         padding-right: var(--tab-space);
