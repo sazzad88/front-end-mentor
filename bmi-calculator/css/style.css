@@ -39,6 +39,15 @@ img {
   border: 1px solid #D8E2E7;
   padding: 20px 24px;
   border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input .unit {
+  color: #345FF6;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -1.2px;
 }
 
 input[type=text] {
