@@ -177,6 +177,14 @@ input[type=text]:focus {
     bottom: -375px;
     width: 92%;
   }
+  .header .calculator .metric-section .input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .calculator .metric-section .input-group .input-section {
+    flex-basis: 46%;
+  }
   .header .calculator .result-section {
     border-top-right-radius: 999px;
     border-bottom-right-radius: 999px;
@@ -210,6 +218,15 @@ input[type=text]:focus {
   }
   .header p {
     max-width: 464px;
+  }
+  .header .calculator {
+    max-width: 564px;
+    top: 140px;
+    left: 75%;
+    max-height: 530px;
+  }
+  .header .calculator.metric {
+    max-height: 414px;
   }
 }
 
