@@ -12,6 +12,7 @@
 :root {
     --clr-header: #253347;
     --clr-para: #5E6E85;
+    --clr-white: #ffffff;
     --mobile-space: 1.5rem;
     --tab-space: 2.5rem;
     --desktop-space: 116px;
@@ -87,6 +88,43 @@ img {
             font-weight: 600;
             letter-spacing: -1.2px;
             text-align: left;
+        }
+
+        .result-section {
+            background: linear-gradient(90deg, #345FF6 0%, #587DFF 100%);
+            border-radius: 16px;
+            // min-height: 2rem;
+            padding: 32px;
+            color: var(--clr-white);
+            margin: 1rem 0;
+
+            h5 {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 150%;
+                margin: 0;
+            }
+
+            .value {
+                font-family: Inter;
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 110%;
+                letter-spacing: -2.4px;
+                margin: 0;
+                margin-top: 8px;
+
+                &-detail {
+                    font-size: 14px;
+                    font-style: normal;
+                    line-height: 150%;
+
+                    strong {
+                        font-weight: 700;
+                    }
+                }
+            }
+
         }
     }
 
