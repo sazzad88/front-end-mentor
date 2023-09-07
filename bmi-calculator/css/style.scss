@@ -102,7 +102,7 @@ input[type='text'] {
 
     .calculator {
         position: absolute;
-        bottom: -500px;
+        bottom: -540px;
         left: 50%;
         min-height: 350px;
         width: 86%;
@@ -175,8 +175,22 @@ input[type='text'] {
         .metric-section {
             margin: 0.5rem 0;
             padding: 0.75rem 0;
+        }
 
+        .imperial-section {
+            margin: 0.5rem 0;
+            padding: 0.75rem 0;
 
+            .input-group {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .input {
+                    flex-basis: 48%;
+                }
+
+            }
         }
     }
 

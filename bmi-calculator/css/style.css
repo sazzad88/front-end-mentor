@@ -93,7 +93,7 @@ input[type=text]:focus {
 }
 .header .calculator {
   position: absolute;
-  bottom: -500px;
+  bottom: -540px;
   left: 50%;
   min-height: 350px;
   width: 86%;
@@ -151,6 +151,18 @@ input[type=text]:focus {
 .header .calculator .metric-section {
   margin: 0.5rem 0;
   padding: 0.75rem 0;
+}
+.header .calculator .imperial-section {
+  margin: 0.5rem 0;
+  padding: 0.75rem 0;
+}
+.header .calculator .imperial-section .input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .calculator .imperial-section .input-group .input {
+  flex-basis: 48%;
 }
 @media (min-width: 768px) {
   .header {
