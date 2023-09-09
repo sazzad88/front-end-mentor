@@ -138,7 +138,7 @@ input[type='text'] {
             // min-height: 2rem;
             padding: 32px;
             color: var(--clr-white);
-            margin: 1rem 0;
+            margin-top: 1rem;
 
 
 
@@ -293,11 +293,7 @@ input[type='text'] {
             max-width: 564px;
             top: 140px;
             left: 75%;
-            max-height: 530px;
-
-            &.metric {
-                max-height: 414px;
-            }
+            bottom: auto;
         }
     }
 }
