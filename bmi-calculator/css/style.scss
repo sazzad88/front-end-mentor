@@ -39,6 +39,14 @@ img {
     width: 100%;
 }
 
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
 .input {
     border: 1px solid #D8E2E7;
     padding: 20px 24px;
@@ -173,9 +181,11 @@ input[type='text'] {
 
 
         // .metric-section {
+
         // }
 
         .imperial-section {
+            display: none;
 
             .input-group {
                 display: flex;
