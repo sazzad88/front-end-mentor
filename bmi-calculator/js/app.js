@@ -28,6 +28,7 @@ function resetValues() {
     Array.prototype.forEach.call(allInputs, function (input) {
         input.value = "0";
     });
+    showResult();
 }
 
 function showMetric() {
