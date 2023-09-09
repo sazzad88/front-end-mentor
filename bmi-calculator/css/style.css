@@ -54,12 +54,16 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 .input .unit {
   color: #345FF6;
   font-size: 24px;
   font-weight: 600;
   letter-spacing: -1.2px;
+}
+.input:hover {
+  border: 1px solid #345FF6;
 }
 
 input[type=text] {
@@ -79,6 +83,11 @@ input[type=text]:focus {
   background: linear-gradient(315deg, #D6E6FE 0%, rgba(214, 252, 254, 0) 100%);
   max-width: 978px;
   min-height: 664px;
+}
+@media (min-width: 1114px) {
+  .top-background {
+    margin-left: 1rem;
+  }
 }
 
 .header {
