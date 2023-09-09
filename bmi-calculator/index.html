@@ -38,18 +38,18 @@
       <div class="bmi-options">
         <label class="radio-container">
           <div class="label">Metric</div>
-          <input type="radio" checked="checked" name="radio">
+          <input type="radio" checked="checked" name="bmi_radio" value="metric">
           <span class="checkmark"></span>
         </label>
 
         <label class="radio-container">
           <div class="label">Imperial</div>
-          <input type="radio" name="radio">
+          <input type="radio" name="bmi_radio" value="imperial">
           <span class="checkmark"></span>
         </label>
       </div>
 
-      <div class="metric-section">
+      <div class="metric-section" id="metric-section">
         <div class="input-group">
           <div class="input-section">
             <div class="label">
@@ -70,7 +70,7 @@
         </div>
       </div>
 
-      <div class="imperial-section">
+      <div class="imperial-section" id="imperial-section">
         <div class="input-section">
           <div class="label">
             Height

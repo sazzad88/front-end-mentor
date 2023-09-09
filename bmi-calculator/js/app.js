@@ -1,8 +1,8 @@
+const metricSection = document.getElementById('metric-section')
+const imperialSection = document.getElementById('imperial-section')
+
 // in all text input only number is allowed to be inserted
-
 function validate(event) {
-
-
     // Handle paste
     if (event.type === 'paste') {
         key = event.clipboardData.getData('text/plain');
@@ -18,7 +18,24 @@ function validate(event) {
         }
 
     }
+}
 
+function showMetric() {
+    imperialSection.style.display = 'none';
+    metricSection.style.display = 'block';
+}
+
+function showImperial() {
+    metricSection.style.display = 'none';
+    imperialSection.style.display = 'block';
+}
+
+function unitChangeHandler() {
+    if (this.value === 'metric') {
+        showMetric();
+    } else {
+        showImperial();
+    }
 }
 
 const allInputs = document.querySelectorAll("input[type='text']");
@@ -26,3 +43,9 @@ const allInputs = document.querySelectorAll("input[type='text']");
 for (let i = 0; i < allInputs.length; i++) {
     allInputs[i].addEventListener('keydown', validate)
 }
+
+const allRadioButtons = document.querySelectorAll("input[name='bmi_radio']");
+
+Array.prototype.forEach.call(allRadioButtons, function (radio) {
+    radio.addEventListener('change', unitChangeHandler);
+});
