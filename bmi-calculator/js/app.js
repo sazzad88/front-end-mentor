@@ -3,6 +3,7 @@ const imperialSection = document.getElementById('imperial-section')
 const allRadioButtons = document.querySelectorAll("input[name='bmi_radio']");
 const allInputs = document.querySelectorAll("input[type='text']");
 const metricInputs = document.querySelectorAll("input[class='metric_input']");
+const imperialInputs = document.querySelectorAll("input[class='imperial_input']");
 const resultsSection = document.querySelectorAll(".results");
 const welcomeSection = document.querySelectorAll(".welcome");
 
@@ -95,8 +96,42 @@ function calculateMetricBMI() {
     }
 }
 
-function metricUnitChangeHandler(event) {
-    calculateMetricBMI();
+function calculateImperialBMI() {
+    const feet = document.getElementById('imperial_ft').value;
+    const inch = document.getElementById('imperial_in').value;
+    const stone = document.getElementById('imperial_st').value;
+    const pound = document.getElementById('imperial_lbs').value;
+
+    let height = 0;
+    let weight = 0;
+
+    if (validInput(stone)) {
+        weight += stone * 14;
+    }
+
+    if (validInput(pound)) {
+        weight += Number(pound);
+    }
+
+    if (validInput(feet)) {
+        height += feet * 12;
+    }
+
+    if (validInput(inch)) {
+        height += Number(inch);
+    }
+
+    if (height && weight) {
+        if (validInput(weight) && validInput(height)) {
+            // (kg / height ^ 2) * 10000
+            const bmi = Number(((weight / height) / height) * 703).toFixed(2)
+            showResult(bmi)
+        } else {
+            showResult()
+        }
+    } else {
+        showResult()
+    }
 }
 
 
@@ -112,5 +147,12 @@ Array.prototype.forEach.call(allRadioButtons, function (radio) {
 });
 
 Array.prototype.forEach.call(metricInputs, function (input) {
-    input.addEventListener('keyup', metricUnitChangeHandler);
+    input.addEventListener('keyup', calculateMetricBMI);
 });
+
+
+Array.prototype.forEach.call(imperialInputs, function (input) {
+    input.addEventListener('keyup', calculateImperialBMI);
+});
+
+
