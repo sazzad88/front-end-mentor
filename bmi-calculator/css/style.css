@@ -148,14 +148,6 @@ input[type=text]:focus {
   line-height: 150%;
   margin-bottom: 0.5rem;
 }
-.header .calculator .metric-section {
-  margin: 0.5rem 0;
-  padding: 0.75rem 0;
-}
-.header .calculator .imperial-section {
-  margin: 0.5rem 0;
-  padding: 0.75rem 0;
-}
 .header .calculator .imperial-section .input-group {
   display: flex;
   align-items: center;
@@ -439,6 +431,82 @@ input[type=text]:focus {
   .bmi-limitation-item:nth-of-type(2) {
     margin-left: 350px;
   }
+}
+
+.bmi-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+.bmi-options .label {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #253347;
+  margin: 4px 0 0 4px;
+}
+
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  flex-basis: 48%;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  width: 32px;
+  border: 1px solid #D8E2E7;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .checkmark {
+  background-color: rgba(52, 95, 246, 0.15);
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark {
+  background-color: rgba(52, 95, 246, 0.15);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .checkmark:after {
+  top: 7px;
+  left: 7px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #345FF6;
 }
 
 /*# sourceMappingURL=style.css.map */
