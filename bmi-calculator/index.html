@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Body Mass Index Calculator</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <section class="top-background">
+
+  </section>
+
+  <section class="header">
+    <img src="./assets/images/logo.svg" alt="logo" />
+    <h2>
+      Body Mass
+      Index Calculator
+    </h2>
+    <p>
+      Better understand your weight in relation to your height using our body mass index (BM) calculator. While BMI is
+      not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health
+      and well-being.
+    </p>
+
+    <div class="calculator">
+      <h2>
+        Enter your details below
+      </h2>
+
+      <div class="bmi-options">
+        <label class="radio-container">
+          <div class="label">Metric</div>
+          <input type="radio" checked="checked" name="bmi_radio" value="metric">
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="radio-container">
+          <div class="label">Imperial</div>
+          <input type="radio" name="bmi_radio" value="imperial">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+
+      <div class="metric-section" id="metric-section">
+        <div class="input-group">
+          <div class="input-section">
+            <div class="label">
+              Height
+            </div>
+            <div class="input">
+              <input type="text" class="metric_input" name="metric_height" id="metric_height" value="0" /> <span
+                class="unit">cm</span>
+            </div>
+          </div>
+          <div class="input-section">
+            <div class="label">
+              Weight
+            </div>
+            <div class="input">
+              <input type="text" class="metric_input" name="metric_weight" id="metric_weight" value="0" /> <span
+                class="unit">kg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="imperial-section" id="imperial-section">
+        <div class="input-section">
+          <div class="label">
+            Height
+          </div>
+          <div class="input-group">
+            <div class="input">
+              <input type="text" class="imperial_input" id="imperial_ft" /> <span class="unit">ft</span>
+            </div>
+            <div class="input">
+              <input type="text" class="imperial_input" id="imperial_in" /> <span class="unit">in</span>
+            </div>
+          </div>
+        </div>
+        <div class="input-section">
+          <div class="label">
+            Weight
+          </div>
+          <div class="input-group">
+            <div class="input">
+              <input type="text" class="imperial_input" id="imperial_st" /> <span class="unit">st</span>
+            </div>
+            <div class="input">
+              <input type="text" class="imperial_input" id="imperial_lbs" /> <span class="unit">lbs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-section">
+        <div class="welcome" id="welcome">
+          <h5>
+            Welcome
+          </h5>
+          <p>
+            Enter your height and weight and you’ll see your BMI result here
+          </p>
+        </div>
+        <div class="summary results">
+          <h5>
+            Your BMI is
+          </h5>
+          <p class="value" id="current_bmi">
+            23.4
+          </p>
+        </div>
+
+
+
+        <p class="value-detail results">
+          Your BMI suggests you’re a healthy weight. Your ideal weight is between <strong>63.3kgs - 85.2kgs</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="means">
+    <img src="./assets/images/image-man-eating.webp" alt="">
+
+    <div class="means-info">
+      <h2>
+        What your BMI result means
+      </h2>
+      <p>
+        A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower your
+        chances of experiencing health issues later on, such as obesity and type 2 diabetes. Aim for a nutritious diet
+        with reduced fat and sugar content, incorporating ample fruits and vegetables. Additionally, strive for regular
+        physical activity, ideally about 30 minutes daily for five days a week.
+      </p>
+    </div>
+  </section>
+
+  <section class="bmi-todos">
+    <div class="light-bg"></div>
+    <div class="wrapper">
+      <div class="todo">
+        <img src="./assets/images/icon-eating.svg" alt="icon-eating">
+        <div class="info">
+          <h3 class="title">
+            Healthy eating
+          </h3>
+
+          <p class="description">
+            Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity, and
+            mood.
+          </p>
+        </div>
+      </div>
+      <div class="todo">
+        <img src="./assets/images/icon-exercise.svg" alt="icon-exercise">
+        <div class="info">
+          <h3 class="title">
+            Regular exercise
+          </h3>
+
+          <p class="description">
+            Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk, fostering wellness
+            and longevity.
+          </p>
+        </div>
+      </div>
+      <div class="todo">
+        <img src="./assets/images/icon-sleep.svg" alt="icon-sleep">
+        <div class="info">
+          <h3 class="title">
+            Adequate sleep
+          </h3>
+
+          <p class="description">
+            Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall restoration and
+            rejuvenation.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="bmi-limitation">
+    <div class="bmi-limitation-header-section">
+      <h2>
+        Limitations of BMI
+      </h2>
+      <p>
+        Although BMI is often a practical indicator of healthy weight, it is not suited for every person. Specific
+        groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be beneficial
+        to use.
+      </p>
+    </div>
+
+    <div class="bmi-limitation-points-section">
+
+      <div class="bmi-limitation-item">
+        <div class="title">
+          <img src="./assets/images/icon-gender.svg" alt="icon-gender">
+          <h3>
+            Gender
+          </h3>
+        </div>
+        <p>
+          The development and body fat composition of girls and boys vary with age. Consequently, a child's age and
+          gender are considered when evaluating their BMI.
+        </p>
+      </div>
+
+
+
+      <div class="bmi-limitation-item">
+        <div class="title">
+          <img src="./assets/images/icon-age.svg" alt="icon-age">
+          <h3>
+            Age
+          </h3>
+        </div>
+        <p>
+          In aging individuals, increased body fat and muscle loss may cause BMI to underestimate body fat content.
+        </p>
+      </div>
+      <div class="bmi-limitation-item">
+        <div class="title">
+          <img src="./assets/images/icon-muscle.svg" alt="icon-muscle">
+          <h3>
+            Muscle
+          </h3>
+        </div>
+        <p>
+          BMI may misclassify muscular individuals as overweight or obese, as it doesn't differentiate muscle from
+          fat.
+        </p>
+      </div>
+
+
+
+      <div class="bmi-limitation-item">
+        <div class="title">
+          <img src="./assets/images/icon-pregnancy.svg" alt="icon-pregnancy">
+          <h3>
+            Pregnancy
+          </h3>
+        </div>
+        <p>
+          Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy BMI
+          is advisable to minimise health risks for both mother and child.
+        </p>
+      </div>
+      <div class="bmi-limitation-item">
+        <div class="title">
+          <img src="./assets/images/icon-race.svg" alt="icon-race">
+          <h3>
+            Race
+          </h3>
+        </div>
+        <p>
+          Certain health concerns may affect individuals of some Black and Asian origins at lower BMIs than others. To
+          learn more, it is advised to discuss this with your GP or practice nurse.
+        </p>
+      </div>
+
+
+    </div>
+    </div>
+  </section>
+
+  <script src="./js/app.js"></script>
+
+</body>
+
+</html>

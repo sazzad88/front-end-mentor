@@ -1,0 +1,641 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+:root {
+    --clr-header: #253347;
+    --clr-para: #5E6E85;
+    --clr-white: #ffffff;
+    --mobile-space: 1.5rem;
+    --tab-space: 2.5rem;
+    --desktop-space: 116px;
+    --max-width: 1114px;
+}
+
+$tablet-width : 768px;
+$desktop-width : 1114px;
+
+body {
+    font-family: 'Inter';
+    margin: 0;
+    color: var(--clr-para);
+}
+
+p,
+div {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+img {
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.results {
+    display: none;
+}
+
+.input {
+    border: 1px solid #D8E2E7;
+    padding: 20px 24px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    .unit {
+        color: #345FF6;
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: -1.2px;
+    }
+
+    &:hover {
+        border: 1px solid #345FF6;
+    }
+}
+
+input[type='text'] {
+    height: 30px;
+    border: 1px solid var(--clr-white);
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+    width: 75%;
+
+    &:focus {
+        outline: none !important;
+    }
+}
+
+.top-background {
+    border-radius: 0px 0px 35px 35px;
+    background: linear-gradient(315deg, #D6E6FE 0%, rgba(214, 252, 254, 0.00) 100%);
+    max-width: 978px;
+    min-height: 664px;
+
+    @media (min-width: $desktop-width) {
+        margin-left: 1rem;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 var(--mobile-space);
+    background: transparent;
+    margin-top: -664px;
+    position: relative;
+
+    img {
+        margin: 32px 0;
+        width: 40px;
+    }
+
+    h2 {
+        color: var(--clr-header);
+        margin: 0;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 110%;
+        letter-spacing: -2.4px;
+        text-align: center;
+    }
+
+    .calculator {
+        position: absolute;
+        bottom: -640px;
+        left: 50%;
+        min-height: 350px;
+        width: 86%;
+        padding: 24px;
+        background: white;
+        border-radius: 12px;
+        transform: translateX(-50%);
+        box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -1.2px;
+            text-align: left;
+        }
+
+        .result-section {
+            background: linear-gradient(90deg, #345FF6 0%, #587DFF 100%);
+            border-radius: 16px;
+            padding: 32px;
+            color: var(--clr-white);
+            margin-top: 1rem;
+
+
+
+            h5 {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 150%;
+                margin: 0;
+            }
+
+            .welcome {
+                h5 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    letter-spacing: -1.2px;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 150%;
+                }
+            }
+
+            .value {
+                font-family: Inter;
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 110%;
+                letter-spacing: -2.4px;
+                margin: 0;
+                margin-top: 8px;
+
+                &-detail {
+                    font-size: 14px;
+                    font-style: normal;
+                    line-height: 150%;
+
+                    strong {
+                        font-weight: 700;
+                    }
+                }
+            }
+
+        }
+
+        .input-section {
+            margin: 1rem 0;
+
+            .label {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 150%;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+
+
+        // .metric-section {
+
+        // }
+
+        .imperial-section {
+            display: none;
+
+            .input-group {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .input {
+                    flex-basis: 48%;
+                }
+
+            }
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        min-height: 640px;
+        padding: 0 var(--tab-space);
+
+        img {
+            margin: 75px 0;
+            width: 64px;
+        }
+
+        .calculator {
+            bottom: -375px;
+            width: 92%;
+
+            .metric-section {
+                .input-group {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .input-section {
+                        flex-basis: 46%;
+                    }
+                }
+            }
+
+            .result-section {
+                border-top-right-radius: 999px;
+                border-bottom-right-radius: 999px;
+
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .value-detail {
+                    width: 270px;
+                }
+
+            }
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        // min-height: 640px;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0;
+        margin-top: -664px;
+
+        align-items: flex-start;
+
+        h2,
+        p {
+            text-align: left;
+            width: 100%;
+
+        }
+
+        h2 {
+            font-size: 64px;
+            font-weight: 600;
+            line-height: 110%;
+            letter-spacing: -3.2px;
+            max-width: 564px;
+
+        }
+
+        p {
+            max-width: 464px;
+        }
+
+        .calculator {
+            max-width: 564px;
+            top: 140px;
+            left: 75%;
+            bottom: auto;
+        }
+    }
+}
+
+.means {
+
+    margin-top: 40rem;
+
+    &-info {
+        padding: 0 var(--mobile-space);
+
+        h2 {
+            margin: 32px 0;
+            color: var(--clr-header);
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 110%;
+            letter-spacing: -1.6px;
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        margin-top: 32rem;
+        display: flex;
+        justify-content: space-between;
+        padding-right: var(--tab-space);
+        overflow: hidden;
+
+        img {
+            width: 360px;
+            margin-left: -60px;
+        }
+
+        &-info {
+            max-width: 372px;
+
+            h2 {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        margin-top: 5rem;
+        padding-right: 0;
+        align-items: center;
+
+        img {
+            width: 564px;
+            margin-left: 0;
+        }
+
+        &-info {
+            max-width: 465px;
+            padding: 0;
+
+            h2 {
+                margin-top: 0;
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 110%;
+                letter-spacing: -2.4px;
+            }
+        }
+    }
+}
+
+.bmi-todos {
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+
+    .light-bg {
+        position: absolute;
+        background: linear-gradient(315deg, #D6E6FE 0%, rgba(214, 252, 254, 0.00) 100%);
+        opacity: 0.25;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .wrapper {
+        padding: 3.5rem var(--mobile-space);
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        background: transparent;
+        z-index: 1;
+
+
+        img {
+            width: 64px;
+        }
+
+        .todo {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .info {
+                .title {
+                    font-size: 24px;
+                    font-weight: 600;
+                    letter-spacing: -1.2px;
+                    margin-top: 0;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+
+
+    @media (min-width: $tablet-width) {
+        .wrapper {
+            padding: 3.5rem var(--tab-space);
+
+            .todo {
+                flex-direction: row;
+                gap: 2.5rem;
+            }
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-left: var(--mobile-space);
+        margin-right: var(--mobile-space);
+        border-radius: 12px;
+
+
+        .wrapper {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding-left: 0;
+            padding-right: 0;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .todo {
+                flex-direction: column;
+                gap: 2.5rem;
+            }
+        }
+
+
+    }
+}
+
+.bmi-limitation {
+    position: relative;
+    padding: 0 var(--mobile-space);
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    &-header-section {
+        margin-bottom: 4rem;
+
+        h2 {
+            margin: 32px 0;
+            color: var(--clr-header);
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 110%;
+            letter-spacing: -1.6px;
+        }
+    }
+
+    &-points {
+        display: flex;
+        flex-direction: column;
+
+        &-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+
+    }
+
+    &-item {
+        border-radius: 16px;
+        box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+        padding: 1rem;
+
+        img {
+            width: 32px;
+            margin-right: 1rem;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        padding: 0 var(--tab-space);
+
+        &-header-section {
+            text-align: center;
+        }
+
+
+        &-points-section {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        &-item {
+            flex-basis: 45%;
+            align-self: normal;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 3rem 0;
+
+
+        &-header-section {
+            max-width: 564px;
+            text-align: left;
+        }
+
+        &-points-section {
+            z-index: -1;
+            position: relative;
+            margin-top: -220px;
+        }
+
+        &-item {
+            max-width: 365px;
+            padding: 2rem;
+        }
+
+        &-item:nth-of-type(1) {
+            margin-left: 600px;
+        }
+
+        &-item:nth-of-type(2) {
+            margin-left: 350px;
+        }
+
+    }
+}
+
+
+
+
+
+.bmi-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+
+    .label {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 150%;
+        color: #253347;
+        margin: 4px 0 0 4px;
+    }
+}
+
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    flex-basis: 48%;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 32px;
+    width: 32px;
+    border: 1px solid #D8E2E7;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input~.checkmark {
+    background-color: rgba(52, 95, 246, 0.15);
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked~.checkmark {
+    background-color: rgba(52, 95, 246, 0.15);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .checkmark:after {
+    top: 7px;
+    left: 7px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #345FF6;
+}
