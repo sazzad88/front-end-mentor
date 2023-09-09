@@ -1,5 +1,6 @@
 const metricSection = document.getElementById('metric-section')
 const imperialSection = document.getElementById('imperial-section')
+const allInputs = document.querySelectorAll("input[type='text']");
 
 // in all text input only number is allowed to be inserted
 function validate(event) {
@@ -20,14 +21,22 @@ function validate(event) {
     }
 }
 
+function resetValues() {
+    Array.prototype.forEach.call(allInputs, function (input) {
+        input.value = "0";
+    });
+}
+
 function showMetric() {
     imperialSection.style.display = 'none';
     metricSection.style.display = 'block';
+    resetValues();
 }
 
 function showImperial() {
     metricSection.style.display = 'none';
     imperialSection.style.display = 'block';
+    resetValues();
 }
 
 function unitChangeHandler() {
@@ -38,7 +47,7 @@ function unitChangeHandler() {
     }
 }
 
-const allInputs = document.querySelectorAll("input[type='text']");
+
 
 for (let i = 0; i < allInputs.length; i++) {
     allInputs[i].addEventListener('keydown', validate)
