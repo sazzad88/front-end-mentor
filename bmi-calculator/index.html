@@ -56,7 +56,8 @@
               Height
             </div>
             <div class="input">
-              <input type="text" name="metric_height" value="0" /> <span class="unit">cm</span>
+              <input type="text" class="metric_input" name="metric_height" id="metric_height" value="0" /> <span
+                class="unit">cm</span>
             </div>
           </div>
           <div class="input-section">
@@ -64,7 +65,8 @@
               Weight
             </div>
             <div class="input">
-              <input type="text" name="metric_weight" value="0" /> <span class="unit">kg</span>
+              <input type="text" class="metric_input" name="metric_weight" id="metric_weight" value="0" /> <span
+                class="unit">kg</span>
             </div>
           </div>
         </div>
@@ -100,22 +102,28 @@
       </div>
 
       <div class="result-section">
-        <div class="summary">
+        <div class="welcome" id="welcome">
+          <h5>
+            Welcome
+          </h5>
+          <p>
+            Enter your height and weight and you’ll see your BMI result here
+          </p>
+        </div>
+        <div class="summary results">
           <h5>
             Your BMI is
           </h5>
-          <p class="value">
+          <p class="value" id="current_bmi">
             23.4
           </p>
         </div>
 
 
 
-        <p class="value-detail">
+        <p class="value-detail results">
           Your BMI suggests you’re a healthy weight. Your ideal weight is between <strong>63.3kgs - 85.2kgs</strong>.
         </p>
-
-
       </div>
     </div>
   </section>

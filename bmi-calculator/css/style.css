@@ -43,6 +43,10 @@ img {
   display: block;
 }
 
+.results {
+  display: none;
+}
+
 .input {
   border: 1px solid #D8E2E7;
   padding: 20px 24px;
@@ -129,6 +133,16 @@ input[type=text]:focus {
   font-weight: 600;
   line-height: 150%;
   margin: 0;
+}
+.header .calculator .result-section .welcome h5 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+}
+.header .calculator .result-section .welcome p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
 }
 .header .calculator .result-section .value {
   font-family: Inter;
